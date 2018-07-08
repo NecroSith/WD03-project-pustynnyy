@@ -1,0 +1,49 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Добавление работы'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+	.container
+		.row
+			.col-xl-10.offset-1
+				.title-1.m-0.pt-60 Добавить работу
+				form.form.mb-100.pb-20.pt-35
+					.fieldset
+						label
+							.fieldset__title Название
+							input(placeholder="Введите название работы").input
+					.fieldset
+						.fieldset__title Изображение
+						.comment-row Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+						.control-row
+							+file("file1")
+					.fieldset
+						label
+							.fieldset__title Содержание
+							textarea(rows="7" placeholder="Введите описание").textarea.height-200
+					.fieldset
+						label
+							.fieldset__title Результат
+							textarea(rows="7" placeholder="Введите описание").textarea.height-200
+					.fieldset
+						label
+							.fieldset__title Технологии
+							textarea(rows="7" placeholder="Введите описание").textarea.height-200
+					.row.fieldset.mb-30
+						.col-4
+							label
+								.fieldset__title Ссылка на проект
+								input(placeholder="Введите ссылку").input
+						.col-4
+							label
+								.fieldset__title Ссылка на GitHub
+								input(placeholder="Введите ссылку").input
+					.row
+						.col-md-auto.pr-10
+							+button('Сохранить','#','button--save')
+						.col-md-auto.pl-10
+							+button('Отмена','#')
+	include ../sections/footer.pug

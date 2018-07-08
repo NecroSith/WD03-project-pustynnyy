@@ -1,0 +1,63 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Редактирование контактных данных'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+	.container
+		.row
+			.col-xl-12
+				.title-1.m-0.pt-60 Редактировать данные
+				form.form.mb-100.pb-20.pt-35
+					.row.fieldset
+						.col-3
+							label
+								.fieldset__title Имя
+								input(placeholder="Введите имя").input
+						.col-3
+							label
+								.fieldset__title Фамилия
+								input(placeholder="Введите фамилию").input
+					.row.fieldset
+						.col-3
+							label
+								.fieldset__title Email
+								input(type="email" placeholder="Введите email").input
+						.col-3
+							label
+								.fieldset__title Skype
+								input(placeholder="Введите skype").input
+					.row.fieldset
+						.col-3
+							label
+								.fieldset__title Вконтакте
+								input(placeholder="Введите ссылку на профиль").input
+						.col-3
+							label
+								.fieldset__title Facebook
+								input(placeholder="Введите ссылку на профиль").input
+						.col-3
+							label
+								.fieldset__title GitHub
+								input(placeholder="Введите ссылку на профиль").input
+						.col-3
+							label
+								.fieldset__title Twitter
+								input(placeholder="Введите ссылку на профиль").input
+					.row.fieldset.mb-30
+						.col-3
+							label
+								.fieldset__title Телефон
+								input(placeholder="Введите телефон").input
+						.col-3
+							label
+								.fieldset__title Адрес
+								input(placeholder="Введите адрес").input
+					.row
+						.col-md-auto.pr-10
+							+button('Сохранить','#','button--save')
+						.col-md-auto.pl-10
+							+button('Отмена','#')
+	include ../sections/footer.pug

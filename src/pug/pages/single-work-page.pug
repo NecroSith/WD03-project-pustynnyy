@@ -1,0 +1,77 @@
+extends ../layouts/clean.pug
+include ../mixins/_header.pug
+
+block variables
+	- var title = 'Страница с отдельной работой'
+	- var pageClass = 'single-work-page'
+
+block content
+	//- Шапка администратор
+	.header-admin
+		.header-admin__profil
+			+avatar-small('avatar-1.jpg')
+			.header-admin__block
+				.header-admin__name= name
+				+badge('Администратор')
+		.header-admin-nav
+			+navigation_admin('fa fa-plus-circle', '#', 'Пост')
+			+navigation_admin('fa fa-plus-circle', '#', 'Работа')
+			+navigation_admin('fa fa-edit', '#', 'Обо мне')
+			+navigation_admin('fa fa-edit', '#', 'Контакты')
+			+navigation_admin('fa fa-envelope', '#', 'Сообщение')
+		.header-admin__signout
+			+navigation_admin_signout('fa fa-sign-out-alt', '#', 'Выход')
+
+	.wrapper
+
+		.header.single-work-page__header
+			.header--vignette.single-work-page__header--vignette
+				.header__top.mb-0
+					.header-admin__general
+						.header__logo
+							a.header__logo-icon-link.single-work-page__header-logo-icon-link(href="#")
+								i.far.fa-paper-plane
+							.header__block-title
+								p.header__title.single-work-page__header-title.mb-0 Digital Lifestyle
+								p.header__subtitle.single-work-page__header-subtitle.mt-0 Сайт IT специалиста
+	
+		// include ../sections/header-admin.pug
+
+		.project.container.mb-100.mt-40.pb-20
+			.project__header.row.mb-45
+				.project__header-info.col-sm-9.offset-sm-1
+					.project__title.title-1.mt-0.mb-20 Верстка и frontend Интернет магазина
+					span.project__name.title-6 Емельян Казаков
+					span.project__works.title-6
+						+link("Работы", "#")
+					span.project__date.title-6 16 марта 2017
+				.project__header-button.col-sm-2.text-right
+					+button('Редактировать','#','button--edit')
+			.col-sm-10.offset-sm-1.pr-0.pl-0
+				img(src="../../img/pages/single-work.png")
+			.row.mt-55
+				.col-sm-6.offset-sm-1
+					.project-info.user-content
+						.title-3 Кратко о проекте
+						p.project__text Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.
+						.title-6 Время работы над проектом: 6 недель
+						.title-6 Страниц сверстано: 52 страницы
+						.title-6 Бюджет проекта: до 60 000 рублей
+						.title-3 Результат
+						p.project__text Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.
+				.col-sm-5
+					.techs
+						.title-3.mt-0 Технологии
+						ul.techs__list
+							li HTML5, CSS3.
+							li Javascript, jQuery.
+							li LESS, PUG, Gulp, npm, bower.
+						.title-3.mt-40 Ссылка на проект
+						+link("http://magnum-store.ru", "http://magnum-store.ru")
+						.title-3.mt-45 Код на github
+						+link("http://github.com/pozitive/magnumstore", "http://github.com/pozitive/magnumstore")
+			.button-block.offset-sm-1.mt-30
+				+button-back("Все работы", '#')
+				+button('Следующая работа','#','','fas fa-arrow-right icon-style')
+
+		include ../sections/footer.pug

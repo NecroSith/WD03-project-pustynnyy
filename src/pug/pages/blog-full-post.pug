@@ -1,0 +1,24 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = "Блог страница с отдельным постом"
+	- var pageClass = ""
+
+block content
+	include ../sections/header-admin.pug
+	.container.mt-70.mb-120
+		.row.justify-content-center
+			.col-md-10
+				.blog-full-post
+					.blog-full-post__button-edit
+						+button('Редактировать','#','button--edit')
+					include ../sections/blog-post.pug
+					.flex-container-button.mt-30
+							+button-back('Назад', "#")
+							+button('Вперед','#','','fas fa-arrow-right icon-style')
+					include ../sections/comments.pug
+					include ../sections/comment-add.pug
+	include ../sections/footer.pug
+	
+
+

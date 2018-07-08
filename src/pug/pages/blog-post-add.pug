@@ -1,0 +1,32 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Добавление поста'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+	.container
+		.row
+			.col-xl-10.offset-1
+				.title-1.m-0.pt-60 Добавить пост
+				form.form.mb-100.pb-20.pt-35
+					.fieldset
+						label
+							.fieldset__title Название
+							input(placeholder="Введите название").input
+					.fieldset
+						.fieldset__title Изображение
+						.comment-row Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+						.control-row
+							+file("file1")
+					.fieldset
+						label
+							.fieldset__title Содержание
+							textarea(rows="7" placeholder="Введите описание").textarea.height-200
+					.row
+						.col-md-auto.pr-10
+							+button('Сохранить','#','button--save')
+						.col-md-auto.pl-10
+							+button('Отмена','#')
+	include ../sections/footer.pug

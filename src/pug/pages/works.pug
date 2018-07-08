@@ -1,0 +1,51 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Страница с работами'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+
+	.main-wrapper
+		.container.container--center
+			.row.justify-content-between.align-items-center.pl-15.pr-15.pt-50
+				.title-1
+					| Работы которые сделал я и моя команда
+				.section-ui
+					+button('Добавить работу','#','button--edit')
+					
+			.row.pb-35
+				.col-4 
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+				.col-4
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+				.col-4
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+
+			.row.pb-35
+				.col-4 
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+				.col-4
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+				.col-4
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+
+			.row.pb-100
+				.col-4 
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+				.col-4
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+				.col-4
+					.section-ui
+						+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')
+
+	include ../sections/footer.pug
