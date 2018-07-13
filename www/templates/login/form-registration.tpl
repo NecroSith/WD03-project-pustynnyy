@@ -1,4 +1,4 @@
-<form class="registration-page-form">
+<form method="POST" action="<?=HOST?>registration" class="registration-page-form">
 	<div class="registration-page-form__header">Регистрация</div>
 	<div class="registration-page-form__row">
 		<div class="error">Введите email</div>
@@ -12,7 +12,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="registration-page-form__row"><input class="input" type="email" placeholder="E-mail" /></div>
-	<div class="registration-page-form__row"><input class="input" type="password" placeholder="Пароль" /></div>
-	<div class="registration-page-form__footer"><a class="button button--registration" href="#"> Регистрация</a></div>
+	<div class="registration-page-form__row">
+		<input name="email" class="input" type="email" placeholder="E-mail" />
+	</div>
+	<div class="registration-page-form__row">
+		<input name="password" class="input" type="password" placeholder="Пароль" />
+	</div>
+	<div class="registration-page-form__footer">
+		<input type="submit" name="register" class="button button--registration" href="#" value="Регистрация" />
+	</div>
 </form>

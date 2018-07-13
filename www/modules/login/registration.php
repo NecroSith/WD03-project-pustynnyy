@@ -1,10 +1,16 @@
 <?php 
 
-// require "config.php";
 
-// echo "reg";
+// If the form is submitted - make registration
+if (isset($_POST['register'])) {
+	echo "<pre>";
+	print_r($_POST);
+	echo "</pre>";
+}
 
 
+
+// Preparing the content for the central block
 ob_start();
 include ROOT . "templates/login/form-registration.tpl";
 

@@ -10,7 +10,7 @@
 	<!-- build:cssVendor css/vendor.css -->
 	<link rel="stylesheet" href="<?=HOST?>templates/assets/libs/normalize-css/normalize.css" />
 	<link rel="stylesheet" href="<?=HOST?>templates/assets/libs/bootstrap-4-grid/grid.min.css" />
-	<link rel="stylesheet" href="<?=HOST?>templates/assets/libs/jquery-custom-scrollbar/jquery.custom-scrollbar.css" />
+	<!-- <link rel="stylesheet" href="<?=HOST?>templates/assets/libs/jquery-custom-scrollbar/jquery.custom-scrollbar.css" /> -->
 	<!-- endbuild -->
 	<!-- build:cssCustom css/main.css -->
 	<link rel="stylesheet" href="<?=HOST?>templates/assets/css/main.css" />
@@ -43,11 +43,11 @@
 	<script src="<?=HOST?>templates/assets/libs/jquery/jquery.min.js"></script>
 	<!-- endbuild -->
 	<!-- build:jsVendor js/vendor.js -->
-	<script src="<?=HOST?>templates/assets/libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+	<!-- <script src="<?=HOST?>templates/assets/libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script> -->
 	<!-- endbuild -->
 	<!-- google maps-->
-	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
-	<script src="<?=HOST?>templates/assets/js/map.js"></script>
+	<!-- <script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script> -->
+	<!-- <script src="<?=HOST?>templates/assets/js/map.js"></script> -->
 	<!-- //google maps-->
 	<!-- build:jsMain js/main.js -->
 	<script src="<?=HOST?>templates/assets/js/main.js"></script>
