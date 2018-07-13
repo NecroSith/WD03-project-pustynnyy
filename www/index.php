@@ -67,7 +67,7 @@ switch ($uri[0]) {
 
 // End Router
 
-// print_r($uri);
+session_start();
 
 
 // ?>
