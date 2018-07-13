@@ -14,7 +14,7 @@ $uri = explode('?', $uri);
 
 switch ($uri[0]) {
 	case '':
-		includeROOT . "modules/main/index.php";
+		include ROOT . "modules/main/index.php";
 		break;
 
 	// users

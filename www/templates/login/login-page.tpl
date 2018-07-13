@@ -14,6 +14,8 @@
 	<!-- endbuild -->
 	<!-- build:cssCustom css/main.css -->
 	<link rel="stylesheet" href="<?=HOST?>templates/assets/css/main.css" />
+	<link rel="stylesheet" href="<?=HOST?>templates/assets/css/custom.css" />
+
 	<!-- endbuild -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
 	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
@@ -41,6 +43,7 @@
 	</div>
 	<!-- build:jsLibs js/libs.js -->
 	<script src="<?=HOST?>templates/assets/libs/jquery/jquery.min.js"></script>
+
 	<!-- endbuild -->
 	<!-- build:jsVendor js/vendor.js -->
 	<!-- <script src="<?=HOST?>templates/assets/libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script> -->
@@ -50,7 +53,7 @@
 	<!-- <script src="<?=HOST?>templates/assets/js/map.js"></script> -->
 	<!-- //google maps-->
 	<!-- build:jsMain js/main.js -->
-	<script src="<?=HOST?>templates/assets/js/main.js"></script>
+	<!-- <script src="<?=HOST?>templates/assets/js/main.js"></script> -->
 	<!-- endbuild -->
 	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
