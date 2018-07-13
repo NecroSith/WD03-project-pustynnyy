@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Страница пользователя</title>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<!-- build:cssVendor css/vendor.css -->
+	<link rel="stylesheet" href="libs/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="libs/bootstrap-4-grid/grid.min.css" />
+	<link rel="stylesheet" href="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.css" />
+	<!-- endbuild -->
+	<!-- build:cssCustom css/main.css -->
+	<link rel="stylesheet" href="./css/main.css" />
+	<!-- endbuild -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body>
+	<div class="header">
+		<div class="header--vignette">
+			<div class="header__top mb-0">
+				<div class="header__logo"><a class="header__logo-icon-link" href="#"><i class="far fa-paper-plane"></i></a>
+					<div class="header__block-title">
+						<p class="header__title mb-0"><a class="header__title" href="#">Digital Lifestyle</a></p>
+						<p class="header__subtitle mt-0">Сайт IT специалиста</p>
+					</div>
+				</div>
+				<div class="header-user__block">
+					<div class="header-user__profil float-left mr-20">
+						<div class="avatar--small"><img src="../img/avatars/avatar-1.jpg" alt="avatar-small" /></div>
+					</div>
+					<div class="header-user__profil-block">
+						<div class="header-user__name">Юрий Ключевский</div>
+						<div class="header-user__rank">Пользователь</div>
+						<div class="header-user__buttons-group">
+							<div class="header-user__buttons-profile mr-10"><a class="button button--profile" href="#"> Профиль</a></div>
+							<div class="header-user__buttons-signout"><a class="button button--profile" href="#"> Выход</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__nav">
+				<ul class="header__nav">
+					<li class="header__nav-items"><a class="header__nav-link--active" href="#">Главная</a></li>
+					<li class="header__nav-items"><a class="header__nav-link" href="#">Обо мне</a></li>
+					<li class="header__nav-items"><a class="header__nav-link" href="#">Работы</a></li>
+					<li class="header__nav-items"><a class="header__nav-link" href="#">Блог</a></li>
+					<li class="header__nav-items"><a class="header__nav-link" href="#">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row align-items-center mt-40">
+			<div class="col offset-md-1">
+				<div class="title-1 color">Профиль</div>
+			</div>
+			<div class="col text-right"><a class="button button--edit" href="#"> Редактировать</a></div>
+		</div>
+		<div class="row offset-md-1">
+			<div class="col-md-auto">
+				<div class="avatar"><img src="../img/avatars/photo-big.jpg" alt="avatar-big" /></div>
+			</div>
+			<div class="col">
+				<div class="user-info">
+					<div class="user-info__title">Имя и фамилия</div>
+					<div class="user-info__desc">Емельян Казаков</div>
+				</div>
+				<div class="user-info">
+					<div class="user-info__title">Email</div>
+					<div class="user-info__desc"><a href="mailto:google.com">pilat@mail.ru</a></div>
+				</div>
+				<div class="user-info">
+					<div class="user-info__title">Страна, Город</div>
+					<div class="user-info__desc">Россия, Казань</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-10">
+				<div class="title-2 color">Комментарии пользователя</div>
+				<div class="profile-comments mb-100">
+					<div class="user-comment">
+						<div class="user-comment-wrap">
+							<div class="comment-wrap">
+								<div class="user-name"><a href="#">Поездка в LA</a></div>
+								<div class="user-date"><i class="far fa-clock"></i><span class="user-date--dat">05 Мая 2017 года в 15:45</span></div>
+							</div>
+							<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
+						</div>
+					</div>
+					<div class="user-comment">
+						<div class="user-comment-wrap">
+							<div class="comment-wrap">
+								<div class="user-name"><a href="#">Ноутбук для веб-разработчика</a></div>
+								<div class="user-date"><i class="far fa-clock"></i><span class="user-date--dat">15 Мая 2017 года в 10:02</span></div>
+							</div>
+							<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
+						</div>
+					</div>
+					<div class="user-comment">
+						<div class="user-comment-wrap">
+							<div class="comment-wrap">
+								<div class="user-name"><a href="#">Настройка Sublime</a></div>
+								<div class="user-date"><i class="far fa-clock"></i><span class="user-date--dat">12 Мая 2017 года в 20:39</span></div>
+							</div>
+							<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Секция под футер для сайта-->
+	<footer class="footer footer-bottom">
+		<div class="container">
+			<div class="footer__flex-wrap">
+				<div class="footer__copyright">
+					<p>Team02</p>
+					<p>Создано c <i class="fas fa-heart"> </i> в <a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2017 году</p>
+				</div>
+				<div class="footer-nav">
+					<ul class="footer__nav-list">
+						<li class="footer__nav-item"><a href="#">Главная</a></li>
+						<li class="footer__nav-item"><a href="#">Обо мне</a></li>
+						<li class="footer__nav-item"><a href="#">Работы</a></li>
+						<li class="footer__nav-item"><a href="#">Блог</a></li>
+						<li class="footer__nav-item"><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer__icons"><a href="#"><i class="fab fa-vk"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- build:jsLibs js/libs.js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:jsVendor js/vendor.js -->
+	<script src="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+	<!-- endbuild -->
+	<!-- google maps-->
+	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
+	<script src="js/map.js"></script>
+	<!-- //google maps-->
+	<!-- build:jsMain js/main.js -->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

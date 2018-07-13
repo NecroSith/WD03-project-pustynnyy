@@ -1,0 +1,49 @@
+extends ../layouts/main.pug
+
+block variables
+	- var title = 'Главная страница'
+	- var pageClass = 'index-page footer-bottom'
+
+block content
+	.container
+		.row.mt-70
+			.col-md-3
+				+avatar('photo-big.jpg')
+			.col-md-9
+				.about
+					.about-me
+						h1.title-1.title-1--special  Емельян Казаков
+						p.
+							Я веб разработчик из Казани. Мне 28 лет.<br> 
+							Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+						p.
+							Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.<br> 
+							Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+					.about-i-do.mb-35
+						.title-1.title--no-margin Что я умею
+						p.
+							Меня привлекет Frontend разработка, это не только моя работа, но и хобби.
+							Также знаком и могу решать не сложные задачи на Backend.
+						p.
+							Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+					+button('Подробнее', '#')
+	hr
+	.container
+		.title-1.mb-25 Новые #[a(href="#") работы]
+		.row
+			.col-md-4
+				+card-portfolio('../img/img-cards/portfolio-preview.png',	'Верстка Landing Page', '#')
+			.col-md-4
+				+card-portfolio('../img/img-cards/kauf-ui-web-kit-demo.png',	'Верстка UI набора', '#')
+			.col-md-4
+				+card-portfolio('../img/img-cards/internet-store.png',	'Верстка интернет магазина', '#')
+		.title-1.mt-70.mb-35 Новые записи в #[a(href="#") блоге] 
+		.row.pb-100
+			.col-md-4
+				+card-post('../img/img-cards/new-york.png', 'Поездка в New York', '#')
+			.col-md-4
+				+card-post('../img/img-cards/what-i-do.png', 'Что я делал в долине', '#')
+			.col-md-4
+				+card-post('../img/img-cards/this-summer.png', 'Как я ходил в поход этим летом', '#')
+
+

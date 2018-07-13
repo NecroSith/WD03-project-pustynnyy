@@ -1,0 +1,17 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Страница сообщения от пользователя'
+	- var pageClass = 'contacts-user-message-page'
+	
+block content
+	include ../sections/header-admin.pug
+	.container
+		.row
+			.col-xl-10.offset-1
+				.title-1.m-0.pt-60 Сообщения от пользователей
+				form.form.mb-100.pb-20.pt-35
+					.fieldset
+						label
+							include ../sections/user-message.pug
+	include ../sections/footer.pug

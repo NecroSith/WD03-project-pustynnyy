@@ -1,0 +1,75 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Формы - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Элементы формы
+			.section-ui
+				form.form
+					fieldset.fieldset
+						label
+							.fieldset__title Поле для ввода
+							input(placeholder="Введите текст").input
+					.fieldset
+						pre.	
+							input(placeholder="Введите текст").input
+					fieldset.fieldset
+						label
+							.fieldset__title Сообщение - Textarea
+							textarea(rows="5" placeholder="Введите текст сообщения").textarea
+					.fieldset
+						pre.
+							textarea(rows="5" placeholder="Введите текст сообщения").textarea
+					fieldset.fieldset
+						.fieldset__title Чекбоксы
+						.control-row
+							.control-col
+								+checkbox("Запомнить меня")
+							.control-col
+								+checkbox("Запомнить меня","checked")
+					.fieldset
+						pre.							
+							+checkbox("Запомнить меня","checked")								
+					fieldset.fieldset
+						.fieldset__title Радиокнопки
+						.control-row
+							+radio("Выбор 1","radio_name","1")
+						.control-row
+							+radio("Выбор 2","radio_name","2","checked")
+					.fieldset
+						pre.							
+							+radio("Выбор 2","radio_name","2","checked")							
+					fieldset.fieldset
+						.fieldset__title Фотография
+						.comment-row Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+						.control-row
+							+file("file1")
+					.fieldset
+						pre.							
+							+file("file1")
+					fieldset.fieldset
+						.fieldset__title Прикрепить файл
+						.comment-row jpg, png, pdf, doc, весом до 2Мб.
+						.control-row
+							+input-file("file3")
+					.fieldset
+						pre.
+							+input-file("file3")
+					fieldset.fieldset
+						.fieldset__title Изображение
+						.comment-row Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.
+						.control-row
+							+file("file2")
+						.control-row.mt-30
+							+uploaded-image("../img/blog/img-post-uploaded.jpg", "Загруженное изображение")
+					.fieldset
+						pre.							
+							+file("file2")
+							.control-row.mt-30
+								+uploaded-image("../img/blog/img-post-uploaded.jpg", "Загруженное изображение")

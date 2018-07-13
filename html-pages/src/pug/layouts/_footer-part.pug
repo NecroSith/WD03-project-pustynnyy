@@ -1,0 +1,20 @@
+<!-- build:jsLibs js/libs.js -->
+script(src="libs/jquery/jquery.min.js")
+<!-- endbuild -->
+
+<!-- build:jsVendor js/vendor.js -->
+block scripts
+	script(src="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js")
+<!-- endbuild -->
+
+<!-- google maps-->
+script(async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&callback=initMap")
+
+script(src="js/map.js")
+<!-- //google maps-->
+
+<!-- build:jsMain js/main.js -->
+script(src="js/main.js")
+<!-- endbuild -->
+
+script(defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js")

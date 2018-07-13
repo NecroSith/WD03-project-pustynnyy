@@ -1,0 +1,196 @@
+<div class="header-admin">
+	<div class="header-admin__profil">
+		<div class="avatar--small"><img src="../img/avatars/avatar-1.jpg" alt="avatar-small" /></div>
+		<div class="header-admin__block">
+			<div class="header-admin__name">Юрий Ключевский</div>
+			<a class="badge-link" href="#">
+				<div class="badge">Администратор</div>
+			</a>
+		</div>
+	</div>
+	<div class="header-admin-nav">
+		<div class="header-admin-nav__items"><i class="fa fa-plus-circle header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Пост</a></div>
+		<div class="header-admin-nav__items"><i class="fa fa-plus-circle header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Работа</a></div>
+		<div class="header-admin-nav__items"><i class="fa fa-edit header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Обо мне</a></div>
+		<div class="header-admin-nav__items"><i class="fa fa-edit header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Контакты</a></div>
+		<div class="header-admin-nav__items"><i class="fa fa-envelope header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Сообщение</a></div>
+	</div>
+	<div class="header-admin__signout"><s class="header-admin__signout"><i class="fa fa-sign-out-alt header-admin__signout-icon"></i><a class="header-admin__signout-titile" href="link">Выход</a></s></div>
+</div>
+<div class="header">
+	<div class="header--vignette">
+		<div class="header__top mb-0">
+			<div class="header-admin__general">
+				<div class="header__logo"><a class="header__logo-icon-link" href="#"><i class="far fa-paper-plane"></i></a>
+					<div class="header__block-title">
+						<p class="header__title mb-0"><a class="header__title" href="#">Digital Lifestyle</a></p>
+						<p class="header__subtitle mt-0">Сайт IT специалиста</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header__nav-block">
+			<ul class="header__nav">
+				<li class="header__nav-items"><a class="header__nav-link--active" href="#">Главная</a></li>
+				<li class="header__nav-items"><a class="header__nav-link" href="#">Обо мне</a></li>
+				<li class="header__nav-items"><a class="header__nav-link" href="#">Работы</a></li>
+				<li class="header__nav-items"><a class="header__nav-link" href="#">Блог</a></li>
+				<li class="header__nav-items"><a class="header__nav-link" href="#">Контакты</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Обо мне - страница редактирования</title>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<!-- build:cssVendor css/vendor.css -->
+	<link rel="stylesheet" href="libs/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="libs/bootstrap-4-grid/grid.min.css" />
+	<link rel="stylesheet" href="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.css" />
+	<!-- endbuild -->
+	<!-- build:cssCustom css/main.css -->
+	<link rel="stylesheet" href="./css/main.css" />
+	<!-- endbuild -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-10 offset-1">
+				<div class="title-1 m-0 pt-60">Редактировать обо мне</div>
+				<form class="form mb-100 pb-20 pt-35">
+					<div class="fieldset__title">Имя, Фамилия</div><input class="input" placeholder="Юрий Ключевский" />
+					<div class="fieldset__title pt-30">Фотография</div>
+					<div class="comment-row">Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.</div>
+					<div class="control-row">
+						<div class="file"><label class="file__label"><input class="file__input" type="file" name="file1"/><span class="file__inner-label">Выбрать файл</span></label><span class="file__inner-caption">Файл не выбран</span></div>
+					</div>
+					<div class="about-editing-avatar">
+						<div class="avatar--small"><img src="../img/avatars/photo-big.jpg" alt="avatar-small" /></div>
+					</div>
+					<div class="fieldset__title">Информация на главной</div><textarea class="textarea" rows="5" placeholder="Введите текст сообщения">Я веб разработчик из Казани. Мне 28 лет.
+Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</textarea>
+					<div class="title-3 mt-50">Технологии</div>
+					<div class="row mb-40">
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">HTML5<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">CSS3<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">JS<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">jQuery<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+					</div>
+					<div class="row mb-40">
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">PHP<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">MySQL<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">Git<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">Gulp<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">Bower<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+						<div class="col-xl-2 col-md-2">
+							<div class="fieldset__title technology__item-title">WebPack<input class="input technology__item-input" placeholder="50" /></div>
+						</div>
+					</div>
+					<div class="title-3 pt-30">Опыт работы</div>
+					<div class="user-message mb-20">
+						<div class="user-message__header">
+							<div class="user-message__date">февраль 2017 — по настоящее время</div>
+							<div class="user-message__button"><a class="button button--del" href="#"> Удалить</a></div>
+						</div>
+						<div class="title-4">Frontend разработчик, Вконтактe, mail.ru group</div>
+						<div class="user-message__text">Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.</div>
+					</div>
+					<div class="user-message mb-20">
+						<div class="user-message__header">
+							<div class="user-message__date">февраль 2017 — по настоящее время</div>
+							<div class="user-message__button"><a class="button button--del" href="#"> Удалить</a></div>
+						</div>
+						<div class="title-4">Frontend разработчик, Вконтактe, mail.ru group</div>
+						<div class="user-message__text">Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.</div>
+					</div>
+					<div class="title-3">Добавить новое место работы</div>
+					<div class="user-message"><label></label>
+						<div class="fieldset__title">Период</div><input class="input mb-15" placeholder="Введите даты начала и окончания работы" /><label></label>
+						<div class="fieldset__title">Название должности</div><input class="input mb-15" placeholder="Введите название должности" /><label></label>
+						<div class="fieldset__title">Описание работы, должностные обязанности, достигнутые результаты</div><textarea class="textarea mb-20" rows="5" placeholder="Напишите интересное краткое содержательное описание"></textarea><a class="button button--save" href="#"> Добавить</a></div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Секция под футер для сайта-->
+	<footer class="footer footer-bottom">
+		<div class="container">
+			<div class="footer__flex-wrap">
+				<div class="footer__copyright">
+					<p>Team02</p>
+					<p>Создано c <i class="fas fa-heart"> </i> в <a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2017 году</p>
+				</div>
+				<div class="footer-nav">
+					<ul class="footer__nav-list">
+						<li class="footer__nav-item"><a href="#">Главная</a></li>
+						<li class="footer__nav-item"><a href="#">Обо мне</a></li>
+						<li class="footer__nav-item"><a href="#">Работы</a></li>
+						<li class="footer__nav-item"><a href="#">Блог</a></li>
+						<li class="footer__nav-item"><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer__icons"><a href="#"><i class="fab fa-vk"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- build:jsLibs js/libs.js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:jsVendor js/vendor.js -->
+	<script src="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+	<!-- endbuild -->
+	<!-- google maps-->
+	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
+	<script src="js/map.js"></script>
+	<!-- //google maps-->
+	<!-- build:jsMain js/main.js -->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script src="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+	<!-- build:jsLibs js/libs.js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:jsVendor js/vendor.js -->
+	<script src="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+	<!-- endbuild -->
+	<!-- google maps-->
+	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
+	<script src="js/map.js"></script>
+	<!-- //google maps-->
+	<!-- build:jsMain js/main.js -->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

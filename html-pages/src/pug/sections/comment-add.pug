@@ -1,0 +1,11 @@
+.title-2.mb-15 Оставить комментарий
+.comment-add-wrapper
+	.comment-add__avatar.float-left
+		+avatar-small('avatar-1.jpg')
+	.comment-add-block
+		.comment-add-block__name= name
+		+error('Комментарий не может быть пустым.')
+		.comment-add-block__text.mt-10
+			textarea(rows="5" placeholder="Введите текст сообщения").textarea
+	.comment-add__button.mt-10
+		+button('Опубликовать', '#')
