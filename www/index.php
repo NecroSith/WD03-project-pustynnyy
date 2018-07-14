@@ -3,6 +3,7 @@
 require "config.php";
 require "db.php";
 
+session_start();
 
 // Router
 
@@ -67,7 +68,7 @@ switch ($uri[0]) {
 
 // End Router
 
-session_start();
+
 
 
 // ?>

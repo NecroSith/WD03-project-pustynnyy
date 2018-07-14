@@ -7,7 +7,7 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 
 // Site settings for email
-define('SITE_NAME', 'Сайт портфолио - WebDev02');
+define('SITE_NAME', 'Сайт портфолио Яна Пустынного');
 define('SITE_EMAIL', 'info@webdev03.com');
 define('ADMIN_EMAIL', 'info@yanpustynnyy.ru');
 
