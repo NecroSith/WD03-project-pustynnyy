@@ -1,6 +1,6 @@
 <?php 
 
-	foreach ($errors as $error) {
+	foreach (@$errors as $error) {
 		if (count($error) == 1){ ?>
 			<div class="error"><?=$error['title']?></div>
 	<?php
