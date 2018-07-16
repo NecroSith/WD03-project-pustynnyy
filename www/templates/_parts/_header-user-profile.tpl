@@ -1,6 +1,14 @@
 <div class="header-user__block">
 	<div class="header-user__profil float-left mr-20">
-		<div class="avatar--small"><img src="../img/avatars/avatar-1.jpg" alt="avatar-small" /></div>
+		<div class="avatar--small">
+			<?php 
+
+				if ($_SESSION['logged-user']['avatar_small'] != '') { ?>
+					<img src="<?=HOST?>usercontent/avatar/<?=$_SESSION['logged-user']['avatar_small']?>" alt="avatar-small" />
+				<?php } 
+
+			?>
+			</div>
 	</div>
 	<div class="header-user__profil-block">
 		<div class="header-user__name"><?=$_SESSION['logged-user']['name']?> <?=$_SESSION['logged-user']['surname']?></div>

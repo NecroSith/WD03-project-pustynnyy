@@ -33,6 +33,6 @@
 		<input name="password" class="input" type="password" placeholder="Пароль" />
 	</div>
 	<div class="registration-page-form__footer">
-		<input type="submit" name="register" class="button button--registration button--reg" href="#" value="Регистрация" />
+		<input type="submit" name="register" class="button button--registration button--reg" href="<?=HOST?>profile-edit" value="Регистрация" />
 	</div>
 </form>

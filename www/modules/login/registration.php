@@ -34,7 +34,7 @@ if (isset($_POST['register'])) {
 		$_SESSION['role'] = $user->role;
 
 		// header('Location: ' . HOST . 'profile-edit');
-		header('Location: ' . HOST . '/');
+		header('Location: ' . HOST . 'profile-edit');
 
 		exit();
 	}

@@ -7,7 +7,16 @@
 		</div>
 		<div class="row offset-md-1">
 			<div class="col-md-auto">
-				<div class="avatar"><img src="../img/avatars/photo-big.jpg" alt="avatar-big" /></div>
+				<div class="avatar">
+					<?php 
+
+				if ($_SESSION['logged-user']['avatar'] != '') { ?>
+					<img src="<?=HOST?>usercontent/avatar/<?=$_SESSION['logged-user']['avatar']?>" alt="<?=$currentUser->name?> <?=$currentUser->surname?>" />
+				<?php } 
+
+			?>
+
+					</div>
 			</div>
 			<div class="col">
 				<div class="user-info">
