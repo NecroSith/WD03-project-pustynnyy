@@ -32,3 +32,12 @@
 .error-with-desc-bottom p:last-child {
 	margin-bottom: 0;
 }
+
+.error--success {
+	background-image: none;
+	background-color: green;
+}
+
+.hidden {
+	display: none;
+}

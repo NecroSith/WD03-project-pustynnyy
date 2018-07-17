@@ -1,5 +1,6 @@
 <?php 
 
+
 $title = "Регистрация";
 $errors = array();
 

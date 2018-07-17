@@ -44,7 +44,7 @@
 			<?=$content?>
 			<div class="registration-page-footer">
 				<div class="footer__copyright">
-					<p>© Юрий Ключевский</p>
+					<p>© Ян Пустынный</p>
 					<p>Создано c <i class="fas fa-heart"> </i> в <a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2017 году </p>
 				</div>
 			</div>

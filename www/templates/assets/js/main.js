@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	
-	$(".left-panel").customScrollbar({preventDefaultScroll: true});
 
 	/* For custom file inputs
 			Based on code
@@ -53,8 +51,9 @@ $(document).ready(function() {
 			});
 		}
 	});
-// ----- check login form ----- //
+	// ----- check login form ----- //
 	$('.button--enter').on('click', function(e){
+		console.log('login');
 		e.preventDefault();
 		input = $('.login-page-form__row').children('input');
 		mail = $('.login-page-form__row').children('input[type=email]');
@@ -79,11 +78,14 @@ $(document).ready(function() {
 			});
 		} else {
 			// переходим на страницу профиля
+			console.log('submit!');
+			$('#loginForm').submit();
 		}
 	});
 
-// ----- check registration form ----- //
+	// ----- check registration form ----- //
 	$('.button--registration').on('click', function(e){
+		console.log('registration');
 		e.preventDefault();
 		input = $('.registration-page-form__row').children('input');
 		mail = $('.registration-page-form__row').children('input[type=email]');
@@ -108,6 +110,47 @@ $(document).ready(function() {
 			});
 		} else {
 			// переходим на страницу профиля
+			// $('#registrationForm').unbind();
+			$('#registrationForm').submit();
 		}
 	});
+
+	// ----- check lost password form ----- //
+	$('.button--lost-password').on('click', function(e){
+		e.preventDefault();
+		input = $('.login-page-form__row').children('input');
+		mail = $('.login-page-form__row').children('input[type=email]');
+		if ( mail.val() == '') {
+			$('.error').fadeIn();
+			$('.error').text('Введите email');
+			input.focus(function(event) {
+				$('.error').fadeOut();
+			});
+		} else {
+			// переходим на страницу профиля
+			$('#passwordLost').submit();
+		}
+	});
+
+
+	// ----- check lost password form ----- //
+	$('.button--set-new-password').on('click', function(e){
+		e.preventDefault();
+		input = $('.login-page-form__row').children('input');
+		password = $('.login-page-form__row').children('input[type=password]');
+		if ( password.val() == '') {
+			$('.error').fadeIn();
+			$('.error').text('Введите пароль');
+			input.focus(function(event) {
+				$('.error').fadeOut();
+			});
+		} else {
+			// переходим на страницу профиля
+			$('#setNewPasswordForm').submit();
+		}
+	});
+
+
+
+
 });

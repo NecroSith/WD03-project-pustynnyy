@@ -1,38 +1,77 @@
 <?php 
 
-function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100) {
+function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 
-	$imagick = new imagick($imagePath);
+	/* Чтение изображения */
+	$imagick = new Imagick($imagePath);
 	$width = $imagick->getImageWidth();
 	$height = $imagick->getImageHeight();
 
-	// if ($width > $height) {
-	// 	$imagick->thumbnailImage(0, $cropHeight);
-	// }
-	// else {
-	// 	$imagick->thumbnailImage($cropWidth, 0);
-	// }
+	// Изменение размера
+	if ( $width > $height ) {
+		$imagick->thumbnailImage(0, $cropHeight);
+	} else {
+		$imagick->thumbnailImage($cropWidth, 0);
+	}
 
-	$imagick->thumbnailImage($cropWidth, $cropHeight);
+	// Кадрирование - обрезка, crop
 
+	// Определяем размеры полученной миниатюры
 	$width = $imagick->getImageWidth();
 	$height = $imagick->getImageHeight();
 
-	$centerX = round($width / 2);
-	$centerY = round($height / 2);
+	// Определяем центр изображения
+	$centreX = round($width / 2); // 300
+	$centreY = round($height / 2); // 150
 
-	$cropWidthHalf = round($cropWidth / 2);
+	// Определяем точку для обрезки по центру 
+	$cropWidthHalf  = round($cropWidth / 2);
 	$cropHeightHalf = round($cropHeight / 2);
-
-	$startX = max(0, $centerX - $cropWidthHalf);
-	$startY = max(0, $centerY - $cropHeightHalf);
+	
+	// Координаты для старта отбрезки
+	$startX = max(0, $centreX - $cropWidthHalf);
+	$startY = max(0, $centreY - $cropHeightHalf);
 
 	$imagick->cropImage($cropWidth, $cropHeight, $startX, $startY);
 
+	// Возвращаем готовое изображение
 	return $imagick;
+	$imagick->destroy();
+}
 
+function createThumbnailBig($imagePath, $cropWidth, $cropHeight){
+	
+	/* Чтение изображения */
+	$imagick = new Imagick($imagePath);
+	$width = $imagick->getImageWidth();
+	$height = $imagick->getImageHeight();
+
+
+	if ( $width >= $height ) {
+		// Для широких картинок
+		$imagick->thumbnailImage($cropWidth, 0);
+	} else {
+		// Для высоких картинок
+		// $imagick->thumbnailImage($cropWidth, 0);
+		// $imagick->cropThumbnailImage($cropWidth, $cropHeight);
+		
+		$imagick->thumbnailImage(0, $cropHeight);
+	}
+
+	return $imagick;
+	$imagick->destroy();
+}
+
+function createThumbnailCrop($imagePath, $cropWidth, $cropHeight){
+	
+	/* Чтение изображения */
+	$imagick = new Imagick($imagePath);
+	$width = $imagick->getImageWidth();
+	$height = $imagick->getImageHeight();
+	$imagick->cropThumbnailImage($cropWidth, $cropHeight);
+	return $imagick;
+	$imagick->destroy();
 
 }
 
-
- ?>
+?>
