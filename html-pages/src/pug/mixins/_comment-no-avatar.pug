@@ -1,0 +1,12 @@
+mixin comment-no-avatar(link,date,text)
+	.user-comment
+		.user-comment-wrap
+			.comment-wrap
+				.user-name
+					a(href='#')= link
+				.user-date
+					i(class="far fa-clock")
+					span.user-date--dat
+						|#{date}
+			p.user-text
+				|#{text}

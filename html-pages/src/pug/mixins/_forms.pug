@@ -1,0 +1,63 @@
+mixin checkbox(label,checked)
+	.checkbox
+		label.checkbox__label
+			if checked
+				input(type="checkbox" checked).checkbox__input
+			else
+				input(type="checkbox").checkbox__input
+			span.checkbox__check-inner
+			span.checkbox__check-inner-label #{label}
+
+mixin radio(label,name,val,checked)
+	.radio
+		label.radio__label
+			if checked
+				input(type="radio" name=name value=val checked).radio__input
+			else
+				input(type="radio" name=name value=val).radio__input
+			span.radio__check-inner
+			span.radio__check-inner-label #{label}
+
+mixin file(name,multiple,buttonText,emptyText,multipleSelectedText)
+	-var buttonText=buttonText||"Выбрать файл"
+	if multiple
+		-var emptyText=emptyText||"Файлы не выбраны"
+	else
+		-var emptyText=emptyText||"Файл не выбран"
+	-var multipleSelectedText=multipleSelectedText||"Выбрано файлов: {count}"
+	.file
+		label.file__label
+			if multiple 
+				input(type="file" name=name data-multiple-caption=multipleSelectedText multiple).file__input
+			else
+				input(type="file" name=name).file__input
+			span.file__inner-label #{buttonText}
+		if multiple 
+			span.file__inner-caption Файлы не выбраны
+		else
+			span.file__inner-caption Файл не выбран
+
+mixin input-file(name,multiple,buttonText,emptyText,multipleSelectedText)
+	-var buttonText=buttonText||"Выбрать файл"
+	if multiple
+		-var emptyText=emptyText||"Файлы не выбраны"
+	else
+		-var emptyText=emptyText||"Файл не выбран"
+	-var multipleSelectedText=multipleSelectedText||"Выбрано файлов: {count}"
+	.file
+		label.file__label
+			if multiple
+				input(type="file" name=name data-multiple-caption=multipleSelectedText multiple).file__input
+			else
+				input(type="file" name=name).file__input
+			span.file__inner-label.file__inner-label--large-radius #{buttonText}
+		if multiple
+			span.file__inner-caption Файлы не выбраны
+		else
+			span.file__inner-caption Файлы не выбран
+
+mixin uploaded-image(src,alt)
+	.uploaded-image
+		img(src=src alt=alt).uploaded-image__img
+		.uploaded-image__button
+			+button('Удалить','#','button--del')

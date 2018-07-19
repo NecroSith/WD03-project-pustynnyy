@@ -1,0 +1,48 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Кнопки - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+	- var icon = 'i.fas.fa-arrow-right.button-arrow'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Кнопки
+			p
+				em Одна кнопка ниже оформлена для примера.
+
+			.section-ui
+				+button('Вперед','#','','fas fa-arrow-right icon-style')
+			pre.
+				+button('Вперед','#','','fas fa-arrow-right icon-style')
+			.section-ui
+				+button-back('Назад','#')
+			pre.
+				+button-back('Назад','#')
+			.section-ui
+				+button('Подробнее','#')
+			pre.
+				+button('Подробнее','#')
+			.section-ui
+				+button('Редактировать','#','button--edit')
+			pre.
+				+button('Редактировать','#','button--edit')
+			.section-ui
+				+button('Удалить','#','button--del')
+			pre.
+				+button('Удалить','#','button--del')
+			.section-ui
+				+button('Сохранить','#','button--save')
+			pre.
+				+button('Сохранить','#','button--save')
+			.section-ui
+				+button('Войти','#','button--enter')
+			pre.
+				+button('Войти','#','button--enter')
+			.section-ui
+				+button('Профиль','#','button--profile')
+			pre.
+				+button('Профиль','#','button--profile')

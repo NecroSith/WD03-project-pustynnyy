@@ -1,0 +1,26 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Карточки - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Карточки
+			p
+				em Карточка пост
+
+			.section-ui
+				+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+			pre.
+				+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+			p
+				em Карточка портфолио
+
+			.section-ui
+				+card-portfolio('../img/svg-for-sprites/portfolio-preview.png', 'Верстка Landing Page', '#')
+			pre.
+				+card-portfolio('../img/svg-for-sprites/portfolio-preview.png',	'Верстка Landing Page', '#')

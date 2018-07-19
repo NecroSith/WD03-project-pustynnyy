@@ -1,0 +1,51 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Блог - страница с постами'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-admin.pug
+
+	.main-wrapper
+		.container.container--center
+			.row.justify-content-between.align-items-center.pl-15.pr-15.pt-50
+				.title-1
+					| Блог веб-разработчика
+				.section-ui
+					+button('Добавить пост','#','button--edit')
+					
+			.row.pb-35
+				.col-4 
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+				.col-4
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+				.col-4
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+
+			.row.pb-35
+				.col-4 
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+				.col-4
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+				.col-4
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+
+			.row.pb-100
+				.col-4 
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+				.col-4
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+				.col-4
+					.section-ui
+						+card-post('../img/svg-for-sprites/blog-preview.png', 'Поездка в New York пример длинного названия поста...', '#')
+
+	include ../sections/footer.pug

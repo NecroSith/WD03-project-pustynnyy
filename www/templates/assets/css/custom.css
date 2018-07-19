@@ -1,0 +1,50 @@
+.button--tp-0 {
+	padding-top: 0;
+}
+/*
+.error-with-desc-text {
+	color: #000;
+	padding-left: 15px;
+	padding-right: 15px;
+}*/
+
+.error {
+	display: block;
+}
+
+.error-with-desc {
+	line-height: 1.3;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.error-with-desc-bottom {
+	padding: 15px 15px 15px;
+	color: #000;
+}
+
+.error-with-desc-bottom p {
+	margin-top: 0;
+	margin-bottom: 10px;
+	line-height: 1.5;
+}
+
+.error-with-desc-bottom p:last-child {
+	margin-bottom: 0;
+}
+
+.error--success {
+	background-image: none;
+	background-color: green;
+}
+
+.hidden {
+	display: none;
+}
+
+.header__nav-link {
+
+}
+.header__nav-link--active {
+  border-bottom: none;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Страница с отдельной работой</title>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<!-- build:cssVendor css/vendor.css -->
+	<link rel="stylesheet" href="libs/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="libs/bootstrap-4-grid/grid.min.css" />
+	<link rel="stylesheet" href="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.css" />
+	<!-- endbuild -->
+	<!-- build:cssCustom css/main.css -->
+	<link rel="stylesheet" href="./css/main.css" />
+	<!-- endbuild -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body class="single-work-page">
+	<div class="header-admin">
+		<div class="header-admin__profil">
+			<div class="avatar--small"><img src="../img/avatars/avatar-1.jpg" alt="avatar-small" /></div>
+			<div class="header-admin__block">
+				<div class="header-admin__name"></div>
+				<a class="badge-link">
+					<div class="badge">Администратор</div>
+				</a>
+			</div>
+		</div>
+		<div class="header-admin-nav">
+			<div class="header-admin-nav__items"><i class="fa fa-plus-circle header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Пост</a></div>
+			<div class="header-admin-nav__items"><i class="fa fa-plus-circle header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Работа</a></div>
+			<div class="header-admin-nav__items"><i class="fa fa-edit header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Обо мне</a></div>
+			<div class="header-admin-nav__items"><i class="fa fa-edit header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Контакты</a></div>
+			<div class="header-admin-nav__items"><i class="fa fa-envelope header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Сообщение</a></div>
+		</div>
+		<div class="header-admin__signout"><s class="header-admin__signout"><i class="fa fa-sign-out-alt header-admin__signout-icon"></i><a class="header-admin__signout-titile" href="link">Выход</a></s></div>
+	</div>
+	<div class="wrapper">
+		<div class="header single-work-page__header">
+			<div class="header--vignette single-work-page__header--vignette">
+				<div class="header__top mb-0">
+					<div class="header-admin__general">
+						<div class="header__logo"><a class="header__logo-icon-link single-work-page__header-logo-icon-link" href="#"><i class="far fa-paper-plane"></i></a>
+							<div class="header__block-title">
+								<p class="header__title single-work-page__header-title mb-0">Digital Lifestyle</p>
+								<p class="header__subtitle single-work-page__header-subtitle mt-0">Сайт IT специалиста</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- include ../sections/header-admin.pug-->
+		<div class="project container mb-100 mt-40 pb-20">
+			<div class="project__header row mb-45">
+				<div class="project__header-info col-sm-9 offset-sm-1">
+					<div class="project__title title-1 mt-0 mb-20">Верстка и frontend Интернет магазина</div><span class="project__name title-6">Емельян Казаков</span><span class="project__works title-6"><a href="#">Работы</a></span><span class="project__date title-6">16 марта 2017</span></div>
+				<div class="project__header-button col-sm-2 text-right"><a class="button button--edit" href="#"> Редактировать</a></div>
+			</div>
+			<div class="col-sm-10 offset-sm-1 pr-0 pl-0"><img src="../../img/pages/single-work.png" /></div>
+			<div class="row mt-55">
+				<div class="col-sm-6 offset-sm-1">
+					<div class="project-info user-content">
+						<div class="title-3">Кратко о проекте</div>
+						<p class="project__text">Сделана верстка и фронтэнд для интернет магазина мебели. Сверстано более 50-ти страниц. Сделаны все эффекты и интерактив. В работе использованы препроцессоры pug и less. Интерактив написан на JavaScript. Весь проект протестирован на своместимость, начиная с IE9. Для старых браузеров использован подход Graceful Degradation.</p>
+						<div class="title-6">Время работы над проектом: 6 недель</div>
+						<div class="title-6">Страниц сверстано: 52 страницы</div>
+						<div class="title-6">Бюджет проекта: до 60 000 рублей</div>
+						<div class="title-3">Результат</div>
+						<p class="project__text">Проект сделан в срок. Заказчик доволен. Сайт запущен, работает и уже радует покупками посетителей и владельцев бизнеса.</p>
+					</div>
+				</div>
+				<div class="col-sm-5">
+					<div class="techs">
+						<div class="title-3 mt-0">Технологии</div>
+						<ul class="techs__list">
+							<li>HTML5, CSS3.</li>
+							<li>Javascript, jQuery.</li>
+							<li>LESS, PUG, Gulp, npm, bower.</li>
+						</ul>
+						<div class="title-3 mt-40">Ссылка на проект</div><a href="http://magnum-store.ru">http://magnum-store.ru</a>
+						<div class="title-3 mt-45">Код на github</div><a href="http://github.com/pozitive/magnumstore">http://github.com/pozitive/magnumstore</a></div>
+				</div>
+			</div>
+			<div class="button-block offset-sm-1 mt-30"><a class="button " href="#"><i class="fas fa-arrow-left icon-style icon-style--back"></i>Все работы</a><a class="button" href="#">Следующая работа<i class="fas fa-arrow-right icon-style"></i></a></div>
+		</div>
+		<!-- Секция под футер для сайта-->
+		<footer class="footer footer-bottom">
+			<div class="container">
+				<div class="footer__flex-wrap">
+					<div class="footer__copyright">
+						<p>Team02</p>
+						<p>Создано c <i class="fas fa-heart"> </i> в <a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2017 году</p>
+					</div>
+					<div class="footer-nav">
+						<ul class="footer__nav-list">
+							<li class="footer__nav-item"><a href="#">Главная</a></li>
+							<li class="footer__nav-item"><a href="#">Обо мне</a></li>
+							<li class="footer__nav-item"><a href="#">Работы</a></li>
+							<li class="footer__nav-item"><a href="#">Блог</a></li>
+							<li class="footer__nav-item"><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="footer__icons"><a href="#"><i class="fab fa-vk"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- build:jsLibs js/libs.js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:jsVendor js/vendor.js -->
+	<script src="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+	<!-- endbuild -->
+	<!-- google maps-->
+	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
+	<script src="js/map.js"></script>
+	<!-- //google maps-->
+	<!-- build:jsMain js/main.js -->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

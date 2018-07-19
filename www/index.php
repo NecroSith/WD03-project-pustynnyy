@@ -1,8 +1,12 @@
 <?php 
 
 require "config.php";
-require "db.php";
+require ROOT . "db.php";
+require ROOT . "libs/functions.php";
 
+$errors = [];
+
+session_start();
 
 // Router
 
@@ -14,27 +18,73 @@ $uri = explode('?', $uri);
 
 switch ($uri[0]) {
 	case '':
-		include "modules/main/index.php";
+		include ROOT . "modules/main/index.php";
 		break;
-	case 'about':
-		include "modules/about/index.php";
+
+	// users
+	case 'login':
+		include ROOT . "modules/login/login.php";
 		break;
+
+	case 'registration':
+		include ROOT . "modules/login/registration.php";
+		break;
+
+	case 'logout':
+		include ROOT . "modules/login/logout.php";
+		break;
+
+	case 'lost-password':
+		include ROOT . "modules/login/lost-password.php";
+		break;
+
+	case 'set-new-password':
+		include ROOT . "modules/login/set-new-password.php";
+		break;
+
+	case 'profile':
+		include ROOT . "modules/profile/index.php";
+		break;
+
+	case 'profile-edit':
+		include ROOT . "modules/profile/profile-edit.php";
+		break;
+
+	//  end users
+
+
+	//  blog section
+
 	case 'blog':
-		include "modules/blog/index.php";
+		include ROOT . "modules/blog/index.php";
 		break;
+
+	case 'blog/post-new':
+		include ROOT . "modules/blog/post-new.php";
+		break;
+
+	case 'blog/post':
+		include ROOT . "modules/blog/post.php";
+		break;
+
+	//  end blog section
+
+	case 'about':
+		include ROOT . "modules/about/index.php";
+		break;
+
 	case 'contacts':
-		include "modules/contacts/index.php";
+		include ROOT . "modules/contacts/index.php";
 		break;
-	default:
-		include "modules/main/index.php";
-		break;
+
+	// default:
+	// 	include ROOT . "modules/main/index.php";
+	// 	break;
 }
 
 // End Router
 
-print_r($uri);
 
 
-?>
 
-<h1>Hello!</h1>
+// ?>

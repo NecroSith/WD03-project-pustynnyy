@@ -1,0 +1,22 @@
+mixin card()
+	.card
+		if block
+			block
+		else
+			p No content provided
+
+mixin card-post(img, title, link)
+	.card.card-post
+		img(class="card-post__img" src = img alt="")
+		.title-4.
+			#{title}
+		+button('Читать', link)
+
+mixin card-portfolio(img, title, link)
+	.card.card-portfolio
+		img(class="card-portfolio__img" src = img alt="")
+		.card-portfolio__body
+			.title-4.
+				#{title}
+			+button('Смотреть кейс', link)
+

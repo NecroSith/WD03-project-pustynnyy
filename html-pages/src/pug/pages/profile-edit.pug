@@ -1,0 +1,49 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Редактирование профиля'
+	- var pageClass = ''
+
+block content
+	include ../sections/header-user.pug
+	.container
+		.row
+			.col-xl-10.offset-1
+				.title-1.m-0.pt-60 Реадактировать профиль
+				form.form.mb-100.pb-20.pt-35
+					.row.fieldset
+						.col-4
+							label
+								.fieldset__title Имя
+								input(placeholder="Введите имя").input
+					.row.fieldset
+						.col-4
+							label
+								.fieldset__title Фамилия
+								input(placeholder="Введите фамилию").input
+					.row.fieldset
+						.col-4
+							label
+								.fieldset__title Email
+								input(type="email" placeholder="Введите email").input
+					.fieldset
+						.fieldset__title Фотография
+						.comment-row Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.
+						.control-row
+							+file("file1")
+					.row.fieldset
+						.col-4
+							label
+								.fieldset__title Страна
+								input(placeholder="Введите страну").input
+					.row.fieldset.mb-30
+						.col-4
+							label
+								.fieldset__title Город
+								input(placeholder="Введите город").input
+					.row
+						.col-md-auto.pr-10
+							+button('Сохранить','#','button--save')
+						.col-md-auto.pl-10
+							+button('Отмена','#')
+	include ../sections/footer.pug
