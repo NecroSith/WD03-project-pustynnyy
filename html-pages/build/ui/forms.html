@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Формы - UI-kit и HTML фреймворк - Документация</title>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<!-- build:cssVendor css/vendor.css -->
+	<link rel="stylesheet" href="../libs/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="../libs/bootstrap-4-grid/grid.min.css" />
+	<link rel="stylesheet" href="../libs/jquery-custom-scrollbar/jquery.custom-scrollbar.css" />
+	<!-- endbuild -->
+	<!-- build:cssCustom css/main.css -->
+	<link rel="stylesheet" href="../css/main.css" />
+	<!-- endbuild -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body class="body--dashboard">
+	<div class="left-panel blue-skin">
+		<div class="left-panel__section"></div>
+		<div class="title-2 pl-15">UI-KIT и PUG фреймворк</div>
+		<div class="left-panel__section">
+			<p class="strong">Документация</p>
+			<div class="left-panel-nav"><a class="left-panel-nav__link" href="docs.html">Документация</a><a class="left-panel-nav__link" href="docs-codestyle.html">Оформление кода</a><a class="left-panel-nav__link" href="docs-styleguide.html">Работа со стилями</a><a class="left-panel-nav__link" href="docs-general-recomendations.html">Общие рекомендации</a></div>
+		</div>
+		<div class="left-panel__section">
+			<p class="strong">Блоки</p>
+			<div class="left-panel-nav"><a class="left-panel-nav__link" href="buttons.html">Кнопки</a><a class="left-panel-nav__link" href="typhography.html">Типографика</a><a class="left-panel-nav__link" href="forms.html">Формы</a><a class="left-panel-nav__link" href="cards.html">Карточки</a><a class="left-panel-nav__link" href="badges.html">Бейджи</a><a class="left-panel-nav__link" href="avatars.html">Аватарки</a><a class="left-panel-nav__link" href="errors.html">Ошибки</a><a class="left-panel-nav__link" href="page-spinner.html">Анимация загрузки</a></div>
+		</div>
+		<div class="left-panel__section">
+			<p class="strong">Секции</p>
+			<div class="left-panel-nav"><a class="left-panel-nav__link" href="comment-add.html">Добавить комментарий</a><a class="left-panel-nav__link" href="comments.html">Комментарии</a><a class="left-panel-nav__link" href="comment-register.html">Комментарий регистрация</a><a class="left-panel-nav__link" href="blog-post.html">Пост в блоге</a><a class="left-panel-nav__link" href="pagination.html">Пагинация</a><a class="left-panel-nav__link" href="user-message.html">Сообщение от пользователя</a><a class="left-panel-nav__link" href="header-admin.html">Шапка администратора</a><a class="left-panel-nav__link" href="header.html">Шапка общая</a><a class="left-panel-nav__link" href="header-user.html">Шапка пользователя</a><a class="left-panel-nav__link" href="footer.html">Подвал сайта</a></div>
+		</div>
+		<div class="left-panel__section">
+			<p class="strong">Страницы</p>
+			<div class="left-panel-nav"><a class="left-panel-nav__link" href="../home.html">Главная</a><a class="left-panel-nav__link" href="../about.html">Обо мне</a><a class="left-panel-nav__link" href="../about-editing.html">Обо мне - редактировать</a><a class="left-panel-nav__link" href="../works.html">Работы</a><a class="left-panel-nav__link" href="../single-work-page.html">Работы - отдельная работа</a><a class="left-panel-nav__link" href="../work-add.html">Работы - добавить</a><a class="left-panel-nav__link" href="../blog-posts.html">Блог</a><a class="left-panel-nav__link" href="../blog-full-post.html">Блог пост</a><a class="left-panel-nav__link" href="../blog-post-add.html">Блог пост - добавить</a><a class="left-panel-nav__link" href="../page-contacts.html">Контакты</a><a class="left-panel-nav__link" href="../contact-edit.html">Контакты - редактировать</a><a class="left-panel-nav__link" href="../contacts-user-message.html">Контакты - сообщения</a><a class="left-panel-nav__link" href="../profile.html">Профиль пользователя</a><a class="left-panel-nav__link" href="../profile-edit.html">Профиль пользователя - редактировать</a><a class="left-panel-nav__link" href="../login.html">Вход на сайт</a><a class="left-panel-nav__link" href="../registration.html">Регистрация</a></div>
+		</div>
+	</div>
+	<div class="main-wrapper">
+		<div class="container container--left">
+			<div class="title">Элементы формы</div>
+			<div class="section-ui">
+				<form class="form">
+					<fieldset class="fieldset"><label><div class="fieldset__title">Поле для ввода</div><input class="input" placeholder="Введите текст"/></label></fieldset>
+					<div class="fieldset">
+						<pre>input(placeholder="Введите текст").input</pre>
+					</div>
+					<fieldset class="fieldset"><label><div class="fieldset__title">Сообщение - Textarea</div><textarea class="textarea" rows="5" placeholder="Введите текст сообщения"></textarea></label></fieldset>
+					<div class="fieldset">
+						<pre>textarea(rows="5" placeholder="Введите текст сообщения").textarea</pre>
+					</div>
+					<fieldset class="fieldset">
+						<div class="fieldset__title">Чекбоксы</div>
+						<div class="control-row">
+							<div class="control-col">
+								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox"/><span class="checkbox__check-inner"></span><span class="checkbox__check-inner-label">Запомнить меня</span></label></div>
+							</div>
+							<div class="control-col">
+								<div class="checkbox"><label class="checkbox__label"><input class="checkbox__input" type="checkbox" checked="checked"/><span class="checkbox__check-inner"></span><span class="checkbox__check-inner-label">Запомнить меня</span></label></div>
+							</div>
+						</div>
+					</fieldset>
+					<div class="fieldset">
+						<pre>+checkbox("Запомнить меня","checked")								</pre>
+					</div>
+					<fieldset class="fieldset">
+						<div class="fieldset__title">Радиокнопки</div>
+						<div class="control-row">
+							<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="radio_name" value="1"/><span class="radio__check-inner"></span><span class="radio__check-inner-label">Выбор 1</span></label></div>
+						</div>
+						<div class="control-row">
+							<div class="radio"><label class="radio__label"><input class="radio__input" type="radio" name="radio_name" value="2" checked="checked"/><span class="radio__check-inner"></span><span class="radio__check-inner-label">Выбор 2</span></label></div>
+						</div>
+					</fieldset>
+					<div class="fieldset">
+						<pre>+radio("Выбор 2","radio_name","2","checked")							</pre>
+					</div>
+					<fieldset class="fieldset">
+						<div class="fieldset__title">Фотография</div>
+						<div class="comment-row">Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.</div>
+						<div class="control-row">
+							<div class="file"><label class="file__label"><input class="file__input" type="file" name="file1"/><span class="file__inner-label">Выбрать файл</span></label><span class="file__inner-caption">Файл не выбран</span></div>
+						</div>
+					</fieldset>
+					<div class="fieldset">
+						<pre>+file("file1")</pre>
+					</div>
+					<fieldset class="fieldset">
+						<div class="fieldset__title">Прикрепить файл</div>
+						<div class="comment-row">jpg, png, pdf, doc, весом до 2Мб.</div>
+						<div class="control-row">
+							<div class="file"><label class="file__label"><input class="file__input" type="file" name="file3"/><span class="file__inner-label file__inner-label--large-radius">Выбрать файл</span></label><span class="file__inner-caption">Файлы не выбран</span></div>
+						</div>
+					</fieldset>
+					<div class="fieldset">
+						<pre>+input-file("file3")</pre>
+					</div>
+					<fieldset class="fieldset">
+						<div class="fieldset__title">Изображение</div>
+						<div class="comment-row">Изображение jpg или png, рекомендуемая ширина 945px и больше, высота от 400px и более, вес до 2Мб.</div>
+						<div class="control-row">
+							<div class="file"><label class="file__label"><input class="file__input" type="file" name="file2"/><span class="file__inner-label">Выбрать файл</span></label><span class="file__inner-caption">Файл не выбран</span></div>
+						</div>
+						<div class="control-row mt-30">
+							<div class="uploaded-image"><img class="uploaded-image__img" src="../img/blog/img-post-uploaded.jpg" alt="Загруженное изображение" />
+								<div class="uploaded-image__button"><a class="button button--del" href="#"> Удалить</a></div>
+							</div>
+						</div>
+					</fieldset>
+					<div class="fieldset">
+						<pre>+file("file2")
+.control-row.mt-30
+	+uploaded-image("../img/blog/img-post-uploaded.jpg", "Загруженное изображение")</pre>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- build:jsLibs js/libs.js -->
+	<script src="../libs/jquery/jquery.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:jsVendor js/vendor.js -->
+	<script src="../libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+	<!-- endbuild -->
+	<!-- google maps-->
+	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
+	<script src="../js/map.js"></script>
+	<!-- //google maps-->
+	<!-- build:jsMain js/main.js -->
+	<script src="../js/main.js"></script>
+	<!-- endbuild -->
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>

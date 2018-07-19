@@ -1,0 +1,138 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = 'Обо мне'
+	- var pageClass = 'about-page'
+
+	include ../sections/header-admin.pug
+	
+block content
+	.section-ui.section.section-main
+		.container
+			.row
+				.col-xl-3
+					+avatar('photo-big.jpg')
+				.col-xl-9
+					.row
+						.col-xl-6
+							h1.section-main_name Емельян Казаков
+						.col-xl-3.offset-3
+							+button('Редактировать','#','button--edit')
+					.row
+						.col-xl-12.user-content
+							p.section-main_text
+								| Я веб разработчик из Казани. Мне 28 лет.
+								br
+								| Занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+							p.section-main_text
+								| Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy.
+							
+								|Чуть позже я освежу в нем свой контент. А пока посмотрите, как тут всё классно и красиво!
+							h3 Что я умею
+							p.section-main_text
+								|Меня привлекет Frontend разработка, это не только моя работа, но и хобби. 
+								br
+								|Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.
+
+	.section-ui.section.section-technologi
+		.container.pb-55.pt-55
+			.row
+				.col-xl-4.offset-3.mb-30.pl-30
+					h2.title-1.mb-10.mt-0 Технологии
+					span.title-medium Которые использую в работе
+			.row.stack
+				.col-xl-3.text-center.pr-0
+					.title-3 Frontend
+				.col-xl-2.pl-0
+					.pie-wrapper.progress-frontend
+						span.title-4 HTML5
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+				.col-xl-2
+					.pie-wrapper.progress-frontend
+						span.title-4 CSS3
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+				.col-xl-2
+					.pie-wrapper.progress-frontend
+						span.title-4 JS
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+				.col-xl-2
+					.pie-wrapper.progress-frontend
+						span.title-4 JQuery
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+			.row.stack
+				.col-xl-3.text-center.pr-0
+					.title-3 Backend
+				.col-xl-2.pl-0
+					.pie-wrapper.progress-backend
+						span.title-4 PHP
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+				.col-xl-2
+					.pie-wrapper.progress-backend
+						span.title-4 MySql
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+			.row.stack
+				.col-xl-3.text-center.pr-0
+					.title-3 Workflow
+				.col-xl-2.pl-0
+					.pie-wrapper.progress-workflow
+						span.title-4 Git
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+				.col-xl-2
+					.pie-wrapper.progress-workflow
+						span.title-4 Gulp
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+				.col-xl-2
+					.pie-wrapper.progress-workflow
+						span.title-4 Bower
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+				.col-xl-2
+					.pie-wrapper.progress-workflow
+						span.title-4.pie-title-16 WebPack
+						.pie
+							.left-side.half-circle
+							.right-side.half-circle
+						.shadow
+	.section-ui.section.section-experience.user-medium
+		.container
+			.row
+				.col-xl-9.offset-3.mt-60.mb-100
+					.title-1.experience_title Опыт работы
+					span.experience_data февраль 2017  — по настоящее время
+					.title-4 Frontend разработчик, Вконтактe, mail.ru group
+					p.about-work Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.
+					span.experience_data сентябрь 2015 — январь 2017
+					.title-4 Разработчик интерфейсов, Яндекс
+					p.about-work Работы в проекте Яндекс Музыка. Создание новых разделов сервиса. Оптимизация и создание новых копанентов платформы.
+					span.experience_data март 2013 — август 2015
+					.title-4 Веб-разработчик, Cloud studio
+					p.about-work Frontend и Backend для клиентских проектов студии. Работа над студийнойя интернет магазинов. Участие в разработке CRM системы "Sky CRM". Стек используемых технологий: Git,JS, Angular.
+
+		include ../sections/footer.pug
+		include ../layouts/_footer-part.pug

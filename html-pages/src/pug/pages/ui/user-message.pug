@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Сообщение от пользователя - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title Сообщение от пользователя
+
+			include ../../sections/user-message.pug
+
+			.section-ui.mt-20
+				.title-medium Подключение из файла
+			pre include ../../sections/user-message.pug

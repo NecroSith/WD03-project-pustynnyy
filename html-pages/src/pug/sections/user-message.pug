@@ -1,0 +1,34 @@
+- var date = "22 Августа 2017"
+- var name = "Джон До"
+- var email = "johndoe@gmail.com"
+
+- var files = ["Avrora-platform.pdf", "Avrora-platform1.pdf"]
+- var messageText = "Привет, как дела?) наконец то написал тебе. Посмотри ТЗ нового проекта. Делаем стартап в B2B сфере, юриспуриденция, контракты, право. Инвестиции уже получены и нам нужен классный фронт энд разработчик, как раз - такой как ты. Будет круто если сможешь поработать с нами."
+
+.user-message.mb-20
+	.user-message__header
+		.user-message__date= date
+		.user-message__button
+			+button('Удалить','#','button--del') 
+	.user-message__from
+		.user-message__name= name
+		a(href="mailto:"+email).user-message__email.user-message__a= email
+	.user-message__text= messageText
+	.user-message__attachments
+		.user-message__attachments-caption Прикрепленные файлы:
+		each item in files
+			a(href="#").user-message__attachments-name.user-message__a= item
+.user-message.mb-20
+	.user-message__header
+		.user-message__date= date
+		.user-message__button
+			+button('Удалить','#','button--del') 
+	.user-message__from
+		.user-message__name= name
+		a(href="mailto:"+email).user-message__email.user-message__a= email
+	
+	.user-message__text= messageText
+	.user-message__attachments
+		.user-message__attachments-caption Прикрепленные файлы:
+		each item in files
+			a(href="#").user-message__attachments-name.user-message__a= item

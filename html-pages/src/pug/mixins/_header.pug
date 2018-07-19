@@ -1,0 +1,19 @@
+mixin navigation (navigation)
+	ul.header__nav
+		each item in navigation
+			if item.cssClass
+				li.header__nav-items
+					a(href= item.link).header__nav-link--active= item.name
+			else
+				li.header__nav-items
+					a(href= item.link).header__nav-link= item.name
+
+mixin navigation_admin (className, link, title)
+	.header-admin-nav__items
+			i(class=className + " header-admin-nav__icons")
+			a(href="link").header-admin-nav__link= title
+
+mixin navigation_admin_signout (className, link, title)
+	s.header-admin__signout
+			i(class=className + " header-admin__signout-icon")
+			a(href="link").header-admin__signout-titile= title

@@ -1,0 +1,18 @@
+extends ../../layouts/ui-layout.pug
+
+block variables
+	- var title = 'Комментарии - UI-kit и HTML фреймворк - Документация'
+	- var pageClass = 'body--dashboard'
+
+block content
+	include ../../sections/ui-nav-inside-ui.pug
+
+	.main-wrapper
+		.container.container--left
+			.title.mb-0 Комментарии
+			
+			include ../../sections/comments.pug
+
+			.section-ui.mt-20
+				.title-medium Подключение из файла
+			pre include ../../sections/comments.pug

@@ -1,0 +1,53 @@
+extends ../layouts/clean.pug
+
+block variables
+	- var title = "Страница контакты"
+	- var pageClass = ""
+
+block content
+	include ../sections/header-admin.pug
+	.container.mt-50
+		.flex-wrap-button
+			.mr-20
+				+button('Редактировать','#','button--edit')
+			+button('Сообщения','#')
+		.row.mb-80
+			.col-md-10
+				.row.justify-content-between
+					.col-md-5
+						.title-2.extrabold Контакты
+						.row.justify-content-between.mt-minus-8
+							.col-md-6
+								ul.contacts-block-subtitle
+									li.contacts-block-subtitle__item Email
+									li.contacts-block-subtitle__item Skype
+									li.contacts-block-subtitle__item.mb-55 Социальные сети
+									li.contacts-block-subtitle__item Телефон
+									li.contacts-block-subtitle__item Адрес
+							.col-md-6.pl-0.pr-0
+								ul.contacts-block-info
+									li.contacts-block-info__item
+										a(class="contacts-block-info__item-link" href="#") webdev-ninja@mail.ru
+									li.contacts-block-info__item
+										a(class="contacts-block-info__item-link" href="#") webdev-ninja
+									li.contacts-block-info__item.strong
+										a(class="contacts-block-info__item-link" href="#") Профиль Вконтакте
+									li.contacts-block-info__item.strong.mb-20
+										a(class="contacts-block-info__item-link" href="#") Профиль Facebook
+									li.contacts-block-info__item +595-456-123
+									li.contacts-block-info__item Россия, Московская обл. г. Зеленоград
+					.col-md-5
+						.title-2.extrabold Связаться со мной
+						form.form
+							input(placeholder="Введите имя").input.mb-10
+							input(placeholder="Email").input.mb-10
+							textarea(rows="5" placeholder="Сообщение").textarea
+							.fieldset__title.mt-20 Прикрепить файл
+							.comment-row jpg, png, pdf, doc, весом до 2Мб.
+							.control-row.mb-20
+								+input-file("file3")
+							+button('Отправить','#','button--save')
+	.map#map
+								
+	include ../sections/footer.pug
+	

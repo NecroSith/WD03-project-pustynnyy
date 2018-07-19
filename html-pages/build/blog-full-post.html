@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Блог страница с отдельным постом</title>
+	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<!-- build:cssVendor css/vendor.css -->
+	<link rel="stylesheet" href="libs/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="libs/bootstrap-4-grid/grid.min.css" />
+	<link rel="stylesheet" href="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.css" />
+	<!-- endbuild -->
+	<!-- build:cssCustom css/main.css -->
+	<link rel="stylesheet" href="./css/main.css" />
+	<!-- endbuild -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<!--[if lt IE 9]><script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
+</head>
+
+<body>
+	<div class="header-admin">
+		<div class="header-admin__profil">
+			<div class="avatar--small"><img src="../img/avatars/avatar-1.jpg" alt="avatar-small" /></div>
+			<div class="header-admin__block">
+				<div class="header-admin__name">Юрий Ключевский</div>
+				<a class="badge-link" href="#">
+					<div class="badge">Администратор</div>
+				</a>
+			</div>
+		</div>
+		<div class="header-admin-nav">
+			<div class="header-admin-nav__items"><i class="fa fa-plus-circle header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Пост</a></div>
+			<div class="header-admin-nav__items"><i class="fa fa-plus-circle header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Работа</a></div>
+			<div class="header-admin-nav__items"><i class="fa fa-edit header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Обо мне</a></div>
+			<div class="header-admin-nav__items"><i class="fa fa-edit header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Контакты</a></div>
+			<div class="header-admin-nav__items"><i class="fa fa-envelope header-admin-nav__icons"></i><a class="header-admin-nav__link" href="link">Сообщение</a></div>
+		</div>
+		<div class="header-admin__signout"><s class="header-admin__signout"><i class="fa fa-sign-out-alt header-admin__signout-icon"></i><a class="header-admin__signout-titile" href="link">Выход</a></s></div>
+	</div>
+	<div class="header">
+		<div class="header--vignette">
+			<div class="header__top mb-0">
+				<div class="header-admin__general">
+					<div class="header__logo"><a class="header__logo-icon-link" href="#"><i class="far fa-paper-plane"></i></a>
+						<div class="header__block-title">
+							<p class="header__title mb-0"><a class="header__title" href="#">Digital Lifestyle</a></p>
+							<p class="header__subtitle mt-0">Сайт IT специалиста</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__nav-block">
+				<ul class="header__nav">
+					<li class="header__nav-items"><a class="header__nav-link--active" href="#">Главная</a></li>
+					<li class="header__nav-items"><a class="header__nav-link" href="#">Обо мне</a></li>
+					<li class="header__nav-items"><a class="header__nav-link" href="#">Работы</a></li>
+					<li class="header__nav-items"><a class="header__nav-link" href="#">Блог</a></li>
+					<li class="header__nav-items"><a class="header__nav-link" href="#">Контакты</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="container mt-70 mb-120">
+		<div class="row justify-content-center">
+			<div class="col-md-10">
+				<div class="blog-full-post">
+					<div class="blog-full-post__button-edit"><a class="button button--edit" href="#"> Редактировать</a></div>
+					<h1 class="blog__heading">Национальный парк Йосемити</h1>
+					<div class="blog__info-wrap"><span class="blog__name">Емельян Казаков</span><span class="blog__travel"><a href="#">Путешествия</a></span><span class="blog__date">16 Марта 2017</span><span class="blog__comments"> <a href="#">2 комментария</a></span></div>
+					<div class="blog__image"> <img src="../img/blog/yosemity.jpg" alt="yosemity" /></div>
+					<div class="user-content">
+						<p>Парк находится в горах <a href="#">Сьерра-Невада</a> на востоке штата Калифорния и занимает огромную даже для Америки площадь, около 3000 кв. км. На этой площади расположены гранитные скальные стены огромной высоты, которыми, собственно, в первую очередь и знаменит парк, водопады, среди которых одни из самых высоких в США, три рощи гигантской секвойи — самого долгоживущего в мире дерева и самого большого по диаметру ствола, а также масса рек, озёр, лесов и лугов. </p>
+						<p>Центром парка является долина <a href="#">Йосемити,</a> круглый год переполненная туристами, зато в большей части парка никаких туристов нет. Если вы хотите погулять по территории парка, к вашим услугам огромная разветвлённая система троп, по которым проложены маршруты длительностью от получаса до нескольких дней. Ко всем этим прелестям бесплатно прилагаются животные и птицы. Если, на ваше счастье, медведей вы скорее всего не увидите, то оленей или бурундуков увидите почти гарантированно, даже не обладая специальными навыками.</p>
+					</div>
+					<div class="flex-container-button mt-30"><a class="button " href="#"><i class="fas fa-arrow-left icon-style icon-style--back"></i>Назад</a><a class="button" href="#">Вперед<i class="fas fa-arrow-right icon-style"></i></a></div>
+					<h3 class="user-comment-header">2 комментария</h3>
+					<div class="user-comment">
+						<div class="user-comment-avatar">
+							<div class="avatar--small"><img src="../img/avatars/avatar-2.jpg" alt="avatar-small" /></div>
+						</div>
+						<div class="user-comment-wrap">
+							<div class="comment-wrap">
+								<div class="user-name">Джо До</div>
+								<div class="user-date"><i class="far fa-clock"></i><span class="user-date--dat">05 Мая 2017 года в 15:45</span></div>
+							</div>
+							<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
+						</div>
+					</div>
+					<div class="user-comment">
+						<div class="user-comment-avatar">
+							<div class="avatar--small"><img src="../img/avatars/avatar-3.jpg" alt="avatar-small" /></div>
+						</div>
+						<div class="user-comment-wrap">
+							<div class="comment-wrap">
+								<div class="user-name">Джо До</div>
+								<div class="user-date"><i class="far fa-clock"></i><span class="user-date--dat">05 Мая 2017 года в 15:45</span></div>
+							</div>
+							<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
+						</div>
+					</div>
+					<div class="title-2 mb-15">Оставить комментарий</div>
+					<div class="comment-add-wrapper">
+						<div class="comment-add__avatar float-left">
+							<div class="avatar--small"><img src="../img/avatars/avatar-1.jpg" alt="avatar-small" /></div>
+						</div>
+						<div class="comment-add-block">
+							<div class="comment-add-block__name">Юрий Ключевский</div>
+							<div class="error">Комментарий не может быть пустым.</div>
+							<div class="comment-add-block__text mt-10"><textarea class="textarea" rows="5" placeholder="Введите текст сообщения"></textarea></div>
+						</div>
+						<div class="comment-add__button mt-10"><a class="button" href="#">Опубликовать</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Секция под футер для сайта-->
+	<footer class="footer footer-bottom">
+		<div class="container">
+			<div class="footer__flex-wrap">
+				<div class="footer__copyright">
+					<p>Team02</p>
+					<p>Создано c <i class="fas fa-heart"> </i> в <a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2017 году</p>
+				</div>
+				<div class="footer-nav">
+					<ul class="footer__nav-list">
+						<li class="footer__nav-item"><a href="#">Главная</a></li>
+						<li class="footer__nav-item"><a href="#">Обо мне</a></li>
+						<li class="footer__nav-item"><a href="#">Работы</a></li>
+						<li class="footer__nav-item"><a href="#">Блог</a></li>
+						<li class="footer__nav-item"><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="footer__icons"><a href="#"><i class="fab fa-vk"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div>
+			</div>
+		</div>
+	</footer>
+	<!-- build:jsLibs js/libs.js -->
+	<script src="libs/jquery/jquery.min.js"></script>
+	<!-- endbuild -->
+	<!-- build:jsVendor js/vendor.js -->
+	<script src="libs/jquery-custom-scrollbar/jquery.custom-scrollbar.js"></script>
+	<!-- endbuild -->
+	<!-- google maps-->
+	<script async="async" defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm799yaN1ZBAnyf6PT3Y_iXSZLkG5w1oE&amp;callback=initMap"></script>
+	<script src="js/map.js"></script>
+	<!-- //google maps-->
+	<!-- build:jsMain js/main.js -->
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+	<script defer="defer" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+
+</html>
