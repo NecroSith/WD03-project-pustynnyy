@@ -1,4 +1,4 @@
-.button--reg {
+.button--tp-0 {
 	padding-top: 0;
 }
 /*
@@ -40,4 +40,11 @@
 
 .hidden {
 	display: none;
+}
+
+.header__nav-link {
+
+}
+.header__nav-link--active {
+  border-bottom: none;
 }

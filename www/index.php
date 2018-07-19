@@ -1,7 +1,10 @@
 <?php 
 
 require "config.php";
-require "db.php";
+require ROOT . "db.php";
+require ROOT . "libs/functions.php";
+
+$errors = [];
 
 session_start();
 
@@ -49,12 +52,25 @@ switch ($uri[0]) {
 
 	//  end users
 
-	case 'about':
-		include ROOT . "modules/about/index.php";
-		break;
+
+	//  blog section
 
 	case 'blog':
 		include ROOT . "modules/blog/index.php";
+		break;
+
+	case 'blog/post-new':
+		include ROOT . "modules/blog/post-new.php";
+		break;
+
+	case 'blog/post':
+		include ROOT . "modules/blog/post.php";
+		break;
+
+	//  end blog section
+
+	case 'about':
+		include ROOT . "modules/about/index.php";
 		break;
 
 	case 'contacts':

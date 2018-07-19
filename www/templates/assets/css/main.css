@@ -1317,12 +1317,6 @@ a.user-message__a:hover {
 .header__nav-link:hover {
   padding-bottom: 55px;
 }
-.header__nav-link--active {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-}
 .header__title {
   margin-top: 50px;
   text-decoration: none;
