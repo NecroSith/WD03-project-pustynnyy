@@ -97,9 +97,9 @@ switch ($uri[0]) {
 		include ROOT . "modules/contacts/index.php";
 		break;
 
-	// default:
-	// 	include ROOT . "modules/main/index.php";
-	// 	break;
+	default:
+		include ROOT . "modules/main/page-not-found.php";
+		break;
 }
 
 // End Router
