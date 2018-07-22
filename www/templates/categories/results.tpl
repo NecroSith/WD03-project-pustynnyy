@@ -13,3 +13,11 @@
 	</div>
 
 <?php } ?>
+
+<?php if ($_GET['result'] == 'catDeleted') { ?>
+
+	<div class="error w-100p" data-notify-hide>
+		Категория успешно удалена
+	</div>
+
+<?php } ?>
