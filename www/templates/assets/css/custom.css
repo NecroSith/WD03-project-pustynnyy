@@ -48,3 +48,7 @@
 .header__nav-link--active {
   border-bottom: none;
 }
+
+.w-100p {
+	width: 100%;
+}

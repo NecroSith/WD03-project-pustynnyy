@@ -13,7 +13,7 @@ if (isset($_POST['catNew'])) {
 		$cat = R::dispense('categories');
 		$cat->cat_title = htmlentities($_POST['catTitle']);
 		R::store($cat);
-		header("Location: " . HOST . "blog/categories");
+		header("Location: " . HOST . "blog/categories?result=catCreated");
 		exit();
 	}
 }

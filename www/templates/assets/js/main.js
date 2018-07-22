@@ -150,6 +150,15 @@ $(document).ready(function() {
 		}
 	});
 
+	setTimeout(function() {
+		$('[data-notify-hide]').slideUp(500);
+	}, 3000);
+
+	$('[data-notify-hide]').dblclick(function() {
+		$('[data-notify-hide]').slideUp(500);
+	});
+
+	
 
 
 
