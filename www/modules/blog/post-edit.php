@@ -1,5 +1,8 @@
 <?php 
 
+if (!isAdmin()) {
+	header("Location: " . HOST);
+}
 
 $title = "Блог - редактировать пост";
 // $currentUser = $_SESSION['logged-user'];
@@ -115,7 +118,7 @@ if(isset($_POST['postUpdate'])) {
 		}
 
 		R::store($post);
-		header('Location: ' . HOST . "blog");
+		header('Location: ' . HOST . "blog?result=postUpdated");
 		exit();
 	}
 }

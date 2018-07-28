@@ -23,7 +23,13 @@
 						<span class="blog__date"><?=rus_date("j F Y H:i", strtotime($post['update_time']))?></span>
 					<?php } ?>
 						<span class="blog__comments"> <a href="#">2 комментария</a></span></div>
-					<div class="blog__image"> <img src="<?=HOST?>usercontent/blog/<?=$post['post_image']?>" alt="<?=$post['title']?>" /></div>
+
+					<?php if ($post['post_image'] != '') { ?>
+						<div class="blog__image"> 
+							<img class="card-post__img" src="<?=HOST?>usercontent/blog/<?=$post['post_image']?>" alt="<?=$post->title?>" />
+						</div>
+					<?php } ?>
+
 					<div class="user-content">
 						<?=$post['text']?>
 					</div>
