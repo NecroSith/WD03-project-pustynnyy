@@ -1,7 +1,10 @@
 <?php 
 
 require "config.php";
-require "db.php";
+require ROOT . "db.php";
+require ROOT . "libs/functions.php";
+
+$errors = [];
 
 session_start();
 
@@ -49,21 +52,54 @@ switch ($uri[0]) {
 
 	//  end users
 
-	case 'about':
-		include ROOT . "modules/about/index.php";
+	//  categories
+
+	case 'blog/categories':
+		include ROOT . "modules/categories/all.php";
+		break;	
+
+	case 'blog/category-new':
+		include ROOT . "modules/categories/new.php";
+		break;	
+
+	case 'blog/category-edit':
+		include ROOT . "modules/categories/edit.php";
 		break;
+
+	case 'blog/category-delete':
+		include ROOT . "modules/categories/delete.php";
+		break;		
+
+	//  end categories
+
+
+	//  blog section
 
 	case 'blog':
 		include ROOT . "modules/blog/index.php";
+		break;
+
+	case 'blog/post-new':
+		include ROOT . "modules/blog/post-new.php";
+		break;
+
+	case 'blog/post':
+		include ROOT . "modules/blog/post.php";
+		break;
+
+	//  end blog section
+
+	case 'about':
+		include ROOT . "modules/about/index.php";
 		break;
 
 	case 'contacts':
 		include ROOT . "modules/contacts/index.php";
 		break;
 
-	// default:
-	// 	include ROOT . "modules/main/index.php";
-	// 	break;
+	default:
+		include ROOT . "modules/main/page-not-found.php";
+		break;
 }
 
 // End Router

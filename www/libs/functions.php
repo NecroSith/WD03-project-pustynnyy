@@ -109,4 +109,23 @@ function adopt($text) {
 	return '=?UTF-8?B?'.base64_encode($text).'?=';
 }
 
+
+function mbCutString($string, $length, $postfix = "...", $encoding = "UTF-8") 
+	{
+
+		$strLength = mb_strlen($string, $encoding);
+
+		if ($strLength <= $length) {
+			return $string;
+		}
+		else {
+			$temp = mb_substr($string, 0, $length, $encoding);
+			$spacePos = mb_strripos($temp, " ", 0, $encoding);
+			$finalResult = mb_substr($temp, 0, $spacePos, $encoding);
+
+			return $finalResult . $postfix;
+		}
+
+}
+
 ?>

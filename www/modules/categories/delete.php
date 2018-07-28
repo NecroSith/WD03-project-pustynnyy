@@ -1,14 +1,20 @@
 <?php 
 
 
-$title = "Блог - все записи";
-// $currentUser = $_SESSION['logged-user'];
+$title = "Удаление категории";
 
-$posts = R::find('posts', 'ORDER BY id DESC');
+$cat = R::load('categories', $_GET['id']);
+
+if (isset($_POST['catDelete'])) {
+	R::trash($cat);
+	header("Location: " . HOST . "blog/categories?result=catDeleted");
+	exit();
+}
+
 
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
-include ROOT . "templates/blog/blog-all-posts.tpl";
+include ROOT . "templates/categories/delete.tpl";
 $content = ob_get_contents();
 ob_end_clean();
 

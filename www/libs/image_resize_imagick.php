@@ -74,4 +74,34 @@ function createThumbnailCrop($imagePath, $cropWidth, $cropHeight){
 
 }
 
+//  usermade function
+
+function createFullSizeImage($imagePath){
+	
+	/* Чтение изображения */
+	$imagick = new Imagick($imagePath);
+	$width = $imagick->getImageWidth();
+	$height = $imagick->getImageHeight();
+
+	 // print_r($width);
+	 // print_r($height);
+
+
+	// if ( $width >= $height ) {
+	// 	// Для широких картинок
+	// 	$imagick->thumbnailImage($cropWidth, 0);
+	// } else {
+	// 	// Для высоких картинок
+	// 	// $imagick->thumbnailImage($cropWidth, 0);
+	// 	// $imagick->cropThumbnailImage($cropWidth, $cropHeight);
+		
+	// 	$imagick->thumbnailImage(0, $cropHeight);
+	// }
+	$imagick->thumbnailImage($width, $height);
+
+
+	return $imagick;
+	$imagick->destroy();
+}
+
 ?>

@@ -258,14 +258,14 @@ a.badge-link {
   border-color: transparent;
 }
 .button--del {
-  padding-left: 1.3em;
-  padding-right: 1.3em;
+  padding-left: 1.8em;
+  padding-right: 1.8em;
   color: #ffffff;
-  font-size: 14px;
-  height: 2.2em;
+  font-size: 16px;
+  height: 44px;
   padding-top: 0.6em;
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.2;
   border: none;
   text-align: center;
   background-color: #b51919;
@@ -1316,12 +1316,6 @@ a.user-message__a:hover {
 }
 .header__nav-link:hover {
   padding-bottom: 55px;
-}
-.header__nav-link--active {
-  color: #fff;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
 }
 .header__title {
   margin-top: 50px;

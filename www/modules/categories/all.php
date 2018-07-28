@@ -1,14 +1,16 @@
 <?php 
 
 
-$title = "Блог - все записи";
-// $currentUser = $_SESSION['logged-user'];
+$title = "Категории блога";
 
-$posts = R::find('posts', 'ORDER BY id DESC');
+$cats = R::find('categories', 'ORDER BY cat_title ASC');
+
+
+
 
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
-include ROOT . "templates/blog/blog-all-posts.tpl";
+include ROOT . "templates/categories/all.tpl";
 $content = ob_get_contents();
 ob_end_clean();
 
