@@ -62,10 +62,12 @@
 					<div class="title-2 mb-15">Оставить комментарий</div>
 					<div class="comment-add-wrapper">
 						<div class="comment-add__avatar float-left">
-							<div class="avatar--small"><img src="../img/avatars/avatar-1.jpg" alt="avatar-small" /></div>
+							<div class="avatar--small">
+								<img src="<?=HOST?>usercontent/avatar/<?=$_SESSION['logged-user']['avatar_small']?>" alt="avatar-small" />
+							</div>
 						</div>
 						<div class="comment-add-block">
-							<div class="comment-add-block__name">Юрий Ключевский</div>
+							<div class="comment-add-block__name"><?=$_SESSION['logged-user']['name']?> <?=$_SESSION['logged-user']['surname']?></div>
 							<div class="error">Комментарий не может быть пустым.</div>
 							<div class="comment-add-block__text mt-10"><textarea class="textarea" rows="5" placeholder="Введите текст сообщения"></textarea></div>
 						</div>
