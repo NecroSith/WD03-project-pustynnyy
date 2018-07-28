@@ -49,6 +49,14 @@
   border-bottom: none;
 }
 
+.w-70p {
+	width: 70%;
+}
+
+.w-80p {
+	width: 80%;
+}
+
 .w-100p {
 	width: 100%;
 }
@@ -59,4 +67,12 @@
 	padding-left: 1.3em;
   	padding-right: 1.3em;
   	line-height: 1;
+}
+
+.uploaded-image {
+	background-color: transparent;
+}
+
+.uploaded-image__img {
+	background-color: white;
 }
