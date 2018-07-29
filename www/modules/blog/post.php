@@ -1,7 +1,5 @@
 <?php 
 
-
-$title = "Блог - все записи";
 // $currentUser = $_SESSION['logged-user'];
 
 // $posts = R::find('posts', 'ORDER BY id DESC');
@@ -21,6 +19,25 @@ WHERE posts.id = " . $_GET['id'] . " LIMIT 1
 
 $post = R::getAll($sql);
 $post = $post[0];
+
+$title = $post['title'];
+
+if (isset($_POST['addComment'])) {
+	if (trim($_POST['commentText']) == '') {
+		$errors[] = ['title' => 'Введите текст комментария'];
+	}
+
+	if (empty($errors)) {
+		$comment = R::dispense('comments');
+		$comment->postId = htmlentities($_GET['id']);
+		$comment->userId = htmlentities($_SESSION['logged-user']['id']);
+		$comment->text = htmlentities($_POST['commentText']);
+		$comment->dateTime = R::isoDateTime();
+		R::store($comment);
+		// header("Location: " . HOST . "blog/post?id=" . $_GET['id']);
+		// exit();
+	}
+}
 
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
