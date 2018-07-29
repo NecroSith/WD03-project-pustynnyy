@@ -24,7 +24,7 @@
 					<?php } ?>
 						<span class="blog__comments"> 
 							<?php if(count($comments) > 0) { ?>
-								<a href="#"><?=commentNumber(count($comments))?> 
+								<a href="#comments"><?=commentNumber(count($comments))?> 
 								</a>
 							<?php
 							 } else { ?>
@@ -55,12 +55,12 @@
 					</div>
 
 					<?php if(count($comments) > 0) { ?>
-						<h3 class="user-comment-header"><?=commentNumber(count($comments))?>
+						<h3 id="comments" class="user-comment-header"><?=commentNumber(count($comments))?>
 						</h3>
 					<?php
 					 	include ROOT . "templates/blog/_comment-card.tpl";
 					 } else { ?>
-						<h3 class="user-comment-header">Комментариев пока нет</h3>
+						<h3 id="comments" class="user-comment-header">Комментариев пока нет</h3>
 					<?php } ?>
 
 					<div class="title-2 mb-15">Оставить комментарий</div>
