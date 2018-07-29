@@ -22,7 +22,18 @@
 							<span class="blog__name mr-1">Обновлено</span>
 						<span class="blog__date"><?=rus_date("j F Y H:i", strtotime($post['update_time']))?></span>
 					<?php } ?>
-						<span class="blog__comments"> <a href="#"><?=commentNumber(count($comments))?></a></span></div>
+						<span class="blog__comments"> 
+							<?php if(count($comments) > 0) { ?>
+								<a href="#"><?=commentNumber(count($comments))?> 
+								</a>
+							<?php
+							 } else { ?>
+								<span>Нет комментариев</span>
+							<?php } ?>
+							
+							</a>
+						</span>
+					</div>
 
 					<?php if ($post['post_image'] != '') { ?>
 						<div class="blog__image"> 
