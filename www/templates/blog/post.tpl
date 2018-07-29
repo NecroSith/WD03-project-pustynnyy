@@ -22,7 +22,7 @@
 							<span class="blog__name mr-1">Обновлено</span>
 						<span class="blog__date"><?=rus_date("j F Y H:i", strtotime($post['update_time']))?></span>
 					<?php } ?>
-						<span class="blog__comments"> <a href="#">2 комментария</a></span></div>
+						<span class="blog__comments"> <a href="#"><?=commentNumber(count($comments))?></a></span></div>
 
 					<?php if ($post['post_image'] != '') { ?>
 						<div class="blog__image"> 
@@ -33,55 +33,28 @@
 					<div class="user-content">
 						<?=$post['text']?>
 					</div>
-					<div class="flex-container-button mt-30"><a class="button " href="#"><i class="fas fa-arrow-left icon-style icon-style--back"></i>Назад</a><a class="button" href="#">Вперед<i class="fas fa-arrow-right icon-style"></i></a></div>
-					<h3 class="user-comment-header">2 комментария</h3>
-					<div class="user-comment">
-						<div class="user-comment-avatar">
-							<div class="avatar--small"><img src="../img/avatars/avatar-2.jpg" alt="avatar-small" /></div>
-						</div>
-						<div class="user-comment-wrap">
-							<div class="comment-wrap">
-								<div class="user-name">Джо До</div>
-								<div class="user-date"><i class="far fa-clock"></i><span class="user-date--dat">05 Мая 2017 года в 15:45</span></div>
-							</div>
-							<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
-						</div>
+
+					<div class="flex-container-button mt-30">
+						<a class="button " href="#">
+							<i class="fas fa-arrow-left icon-style icon-style--back"></i>Предыдущий пост
+						</a>
+						<a class="button" href="#">Следующий пост
+							<i class="fas fa-arrow-right icon-style"></i>
+						</a>
 					</div>
-					<div class="user-comment">
-						<div class="user-comment-avatar">
-							<div class="avatar--small"><img src="../img/avatars/avatar-3.jpg" alt="avatar-small" /></div>
-						</div>
-						<div class="user-comment-wrap">
-							<div class="comment-wrap">
-								<div class="user-name">Джо До</div>
-								<div class="user-date"><i class="far fa-clock"></i><span class="user-date--dat">05 Мая 2017 года в 15:45</span></div>
-							</div>
-							<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
-						</div>
-					</div>
+
+					<?php if(count($comments) > 0) { ?>
+						<h3 class="user-comment-header"><?=commentNumber(count($comments))?>
+						</h3>
+					<?php
+					 	include ROOT . "templates/blog/_comment-card.tpl";
+					 } else { ?>
+						<h3 class="user-comment-header">Комментариев пока нет</h3>
+					<?php } ?>
+
 					<div class="title-2 mb-15">Оставить комментарий</div>
-					<form id="commentForm" class="comment-add-wrapper" method="POST" action="<?=HOST?>blog/post?id=<?=$post['id']?>">
-						<div class="comment-add__avatar float-left">
-							<div class="avatar--small">
-								<?php if ($_SESSION['logged-user']['avatar_small'] != '') { ?>
-									<img src="<?=HOST?>usercontent/avatar/<?=$_SESSION['logged-user']['avatar_small']?>" alt="avatar-small" />
-								<?php }  else { ?>
-									<img src="<?=HOST?>www/templates/assets/img/noavatar.png" alt="avatar-small" />
-								<?php	} ?>
-							</div>
-						</div>
-						<div class="comment-add-block">
-							<div class="comment-add-block__name"><?=$_SESSION['logged-user']['name']?> <?=$_SESSION['logged-user']['surname']?></div>
-							<div class="error" style="display: none" data-error-comment-empty >Комментарий не может быть пустым.</div>
-							<div class="comment-add-block__text mt-10">
-								<textarea name="commentText" class="textarea" rows="5" placeholder="Введите текст сообщения"></textarea>
-							</div>
-						</div>
-						<div class="comment-add__button mt-10">
-							<input type="hidden" value="newComment" name="addComment">
-							<input name="addComment" class="button" type="submit" value="Опубликовать" data-add-comment>
-						</div>
-					</form>
+
+					<?php include ROOT . "templates/blog/_add-comment-form.tpl"; ?>
 				</div>
 			</div>
 		</div>
