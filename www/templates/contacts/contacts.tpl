@@ -87,12 +87,32 @@
 				</div>
 				<div class="col-md-5">
 					<div class="title-2 extrabold">Связаться со мной</div>
-					<form class="form"><input class="input mb-10" placeholder="Введите имя" /><input class="input mb-10" placeholder="Email" /><textarea class="textarea" rows="5" placeholder="Сообщение"></textarea>
+
+					<?php 
+					include ROOT . "templates/_parts/_error.tpl"; 
+					include ROOT . "templates/_parts/_success.tpl";
+					?>
+
+					<form class="form" action="<?=HOST?>contacts" method="POST" enctype="multipart/form-data">
+						<input name="name" class="input mb-10" placeholder="Введите имя" />
+
+						<input name="email" class="input mb-10" placeholder="Email" />
+
+						<textarea name="text" class="textarea" rows="5" placeholder="Сообщение"></textarea>
 						<div class="fieldset__title mt-20">Прикрепить файл</div>
+
 						<div class="comment-row">jpg, png, pdf, doc, весом до 2Мб.</div>
 						<div class="control-row mb-20">
-							<div class="file"><label class="file__label"><input class="file__input" type="file" name="file3"/><span class="file__inner-label file__inner-label--large-radius">Выбрать файл</span></label><span class="file__inner-caption">Файлы не выбран</span></div>
-						</div><a class="button button--save" href="#"> Отправить</a></form>
+							<div class="file">
+								<label class="file__label">
+									<input name="file" class="file__input" type="file" name="file3"/>
+									<span class="file__inner-label file__inner-label--large-radius">Выбрать файл</span>
+								</label>
+								<span class="file__inner-caption">Файлы не выбран</span>
+							</div>
+						</div>
+						<input type="submit" name="newMessage" class="button button--save button--tp-0" value="Отправить">
+					</form>
 				</div>
 			</div>
 		</div>

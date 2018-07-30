@@ -1,9 +1,9 @@
 <footer class="footer footer-bottom">
 		<div class="container">
 			<div class="footer__flex-wrap">
-				<div class="footer__copyright">
+				<div class="footer__copyright col-5">
 					<p>Ян Пустынный</p>
-					<p>Создано c <i class="fas fa-heart"> </i> в <a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2017 году</p>
+					<p>Создано c <i class="fas fa-heart"> </i> при большой интеллектуальной и моральной поддержке <a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2018 году</p>
 				</div>
 				<div class="footer-nav">
 					<ul class="footer__nav-list">
@@ -29,12 +29,6 @@
 					</a>
 					<a href="#">
 						<i class="fab fa-facebook"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-github"></i>
-					</a>
-					<a href="#">
-						<i class="fab fa-bitbucket"></i>
 					</a>
 				</div>
 			</div>

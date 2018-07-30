@@ -5,6 +5,7 @@ require ROOT . "db.php";
 require ROOT . "libs/functions.php";
 
 $errors = [];
+$success = [];
 
 session_start();
 
