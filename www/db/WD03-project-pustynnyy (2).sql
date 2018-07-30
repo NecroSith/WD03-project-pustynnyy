@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 29 2018 г., 23:37
+-- Время создания: Июл 30 2018 г., 12:19
 -- Версия сервера: 5.6.38
 -- Версия PHP: 7.2.0
 
@@ -108,6 +108,22 @@ INSERT INTO `contacts` (`id`, `email`, `phone`, `address`, `name`, `surname`, `s
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `messages`
+--
+
+CREATE TABLE `messages` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `email` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `name` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `text` text COLLATE utf8mb4_unicode_520_ci,
+  `message_file_name_original` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `message_file` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
+  `date_time` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `posts`
 --
 
@@ -202,6 +218,12 @@ ALTER TABLE `contacts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `posts`
 --
 ALTER TABLE `posts`
@@ -235,6 +257,12 @@ ALTER TABLE `comments`
 --
 ALTER TABLE `contacts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблицы `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`

@@ -12,7 +12,7 @@ if (!empty($_GET['id'])) {
 	$messageImgFolderLocation = ROOT . 'usercontent/upload_files/';
 	$messageImg = $currentMessage->message_file;
 	if ( $messageImg != '' ) {
-		$imgURL = $messageImgFolderLocation . $postImg;
+		$imgURL = $messageImgFolderLocation . $messageImg;
 		if ( file_exists($imgURL) ) { 
 			unlink($imgURL); 
 		}
