@@ -98,9 +98,25 @@ switch ($uri[0]) {
 
 	//  end blog section
 
+	// About
+
 	case 'about':
 		include ROOT . "modules/about/index.php";
 		break;
+
+	case 'about-edit':
+		include ROOT . "modules/about/about-edit.php";
+		break;
+
+	case 'skills-edit':
+		include ROOT . "modules/about/skills-edit.php";
+		break;
+
+	case 'experience-edit':
+		include ROOT . "modules/about/experience-edit.php";
+		break;
+
+	// end about
 
 	//  Contacts
 
