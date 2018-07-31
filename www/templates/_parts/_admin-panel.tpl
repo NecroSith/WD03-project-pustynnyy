@@ -1,9 +1,9 @@
 <div class="header-admin">
 		<div class="header-admin__profil">
-			<div class="avatar--small"><img src="../img/avatars/avatar-1.jpg" alt="avatar-small" /></div>
+			<div class="avatar--small"><img src="<?=HOST?>usercontent/avatar/<?=$_SESSION['logged-user']['avatar_small']?>" alt="" /></div>
 			<div class="header-admin__block">
 				<div class="header-admin__name"><?=$_SESSION['logged-user']['name']?> <?=$_SESSION['logged-user']['surname']?></div>
-				<a class="badge-link" href="?=$HOST?>profile">
+				<a class="badge-link" href="<?=HOST?>profile">
 					<div class="badge">Администратор</div>
 				</a>
 			</div>

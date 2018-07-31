@@ -14,7 +14,29 @@
 						<li class="footer__nav-item"><a href="<?=HOST?>contacts">Контакты</a></li>
 					</ul>
 				</div>
-				<div class="footer__icons"><a href="#"><i class="fab fa-vk"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-facebook"></i></a></div>
+				<div class="footer__icons">
+					<a href="#">
+						<i class="fab fa-vk"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-telegram-plane"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-linkedin"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-facebook"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-github"></i>
+					</a>
+					<a href="#">
+						<i class="fab fa-bitbucket"></i>
+					</a>
+				</div>
 			</div>
 		</div>
 	</footer>
