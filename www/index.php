@@ -104,16 +104,16 @@ switch ($uri[0]) {
 		include ROOT . "modules/about/index.php";
 		break;
 
-	case 'about-edit':
-		include ROOT . "modules/about/about-edit.php";
+	case 'edit-text':
+		include ROOT . "modules/about/edit-text.php";
 		break;
 
-	case 'skills-edit':
-		include ROOT . "modules/about/skills-edit.php";
+	case 'edit-skills':
+		include ROOT . "modules/about/edit-skills.php";
 		break;
 
-	case 'experience-edit':
-		include ROOT . "modules/about/experience-edit.php";
+	case 'edit-jobs':
+		include ROOT . "modules/about/edit-jobs.php";
 		break;
 
 	// end about
