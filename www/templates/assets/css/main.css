@@ -1213,7 +1213,7 @@ a.user-message__a:hover {
   margin-right: 35px;
 }
 .header {
-  background: url(../../img/bg/header-bg-1.jpg);
+  background: url(../img/bg/header-bg-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   height: 280px;
@@ -1440,7 +1440,7 @@ a.user-message__a:hover {
   text-decoration: none;
 }
 .header {
-  background: url(../../img/bg/header-bg-1.jpg);
+  background: url(../img/bg/header-bg-1.jpg);
   background-position: center;
   background-repeat: no-repeat;
   height: 200px;
@@ -2011,7 +2011,7 @@ hr {
   text-decoration: none;
 }
 .wrapper {
-  background-image: url('../../img/pages/bg-single-work-grad.png');
+  background-image: url('../img/pages/bg-single-work-grad.png');
   background-repeat: no-repeat;
   background-size: contain;
 }
