@@ -1,4 +1,4 @@
-<body class="Home-page sticky-footer">
+<body class="Home-page">
 
 <div class="page-content">	
 

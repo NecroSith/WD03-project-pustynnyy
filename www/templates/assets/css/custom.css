@@ -153,3 +153,18 @@
 .circle__indicator--yellow {
 	stroke: #ffcc00;
 }
+
+.not-found__container {
+	text-align: center;
+}
+
+.error-404 {
+	color: #252525;
+	text-align: center;
+	font-size: 156px;
+	font-weight: 800;
+}
+
+.text-404 {
+	font-size: 20px;
+}
