@@ -46,12 +46,12 @@
 					</div>
 
 					<div class="flex-container-button mt-30">
-						<a class="button " href="#">
+						<!-- <a class="button " href="#">
 							<i class="fas fa-arrow-left icon-style icon-style--back"></i>Предыдущий пост
 						</a>
 						<a class="button" href="#">Следующий пост
 							<i class="fas fa-arrow-right icon-style"></i>
-						</a>
+						</a> -->
 					</div>
 
 					<?php if(count($comments) > 0) { ?>
