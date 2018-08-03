@@ -1,24 +1,21 @@
 <div class="container mb-100">
+	<?php include ROOT . "templates/_parts/_error.tpl"; ?>
 	<div class="title-3 pt-30">Опыт работы</div>
-		<div class="user-message mb-20">
-			<div class="user-message__header">
-				<div class="user-message__date">февраль 2017 — по настоящее время</div>
-				<div class="user-message__button"><a class="button button--del" href="#"> Удалить</a></div>
-			</div>
-			<div class="title-4">Frontend разработчик, Вконтактe, mail.ru group</div>
-			<div class="user-message__text">Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.</div>
-		</div>
-		<div class="user-message mb-20">
-			<div class="user-message__header">
-				<div class="user-message__date">февраль 2017 — по настоящее время</div>
-				<div class="user-message__button"><a class="button button--del" href="#"> Удалить</a></div>
-			</div>
-			<div class="title-4">Frontend разработчик, Вконтактe, mail.ru group</div>
-			<div class="user-message__text">Работы в команде Вконтакте. Работал в команде над обновление сервиса Музыка, работа над видео разделом. Создание видеоплеера. Создание кроссбраузерных компонентов. Работа над оптимизацией скорости загрузки медиа контента.</div>
-		</div>
+
+		<?php foreach($jobs as $job) { 
+
+			include ROOT . "templates/about/_card-job-edit.tpl";
+		 } ?>
+
+		<form action="<?=HOST?>edit-jobs" method="POST">
 		<div class="title-3">Добавить новое место работы</div>
-		<div class="user-message"><label></label>
-			<div class="fieldset__title">Период</div><input class="input mb-15" placeholder="Введите даты начала и окончания работы" /><label></label>
-			<div class="fieldset__title">Название должности</div><input class="input mb-15" placeholder="Введите название должности" /><label></label>
-			<div class="fieldset__title">Описание работы, должностные обязанности, достигнутые результаты</div><textarea class="textarea mb-20" rows="5" placeholder="Напишите интересное краткое содержательное описание"></textarea><a class="button button--save" href="#"> Добавить</a></div>
+		<div class="user-message">
+			<div class="fieldset__title">Период</div>
+			<input name="period" class="input mb-15" placeholder="Введите даты начала и окончания работы" />
+			<div class="fieldset__title">Название должности</div>
+			<input name="title" class="input mb-15" placeholder="Введите название должности" />
+			<div class="fieldset__title">Описание работы, должностные обязанности, достигнутые результаты</div>
+			<textarea name="description" class="textarea mb-20" rows="5" placeholder="Напишите интересное краткое содержательное описание"></textarea>
+			<input name="newJob" class="button button--save button--tp-0" type="submit" value="Добавить">
+		</form>
 </div>

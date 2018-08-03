@@ -1,6 +1,13 @@
 <?php 
 
+if (!isAdmin()) {
+	header("Location: " . HOST);
+	die();
+}
+
 $title = "Редактировать - Об авторе";
+
+$about = R::load('about', 4);
 
 if ( isset($_POST['textUpdate'])) {
 
@@ -13,7 +20,7 @@ if ( isset($_POST['textUpdate'])) {
 	}
 
 	if ( empty($errors)) {
-		$about = R::dispense('about');
+		// $about = R::dispense('about');
 		$about->name = htmlentities($_POST['name']);
 		$about->description = $_POST['text'];
 
