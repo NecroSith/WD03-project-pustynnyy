@@ -5,11 +5,21 @@
 			<div class="col-xl-10 offset-1">
 				<div class="title-1 m-0 pt-60">Добавить пост</div>
 				<?php include ROOT . "templates/_parts/_error.tpl" ?>
-				<form action="<?=HOST?>blog/post-new" method="POST" class="form mb-100 pb-20 pt-35">
+				<form enctype="multipart/form-data" action="<?=HOST?>blog/post-new" method="POST" class="form mb-100 pb-20 pt-35">
 					<div class="fieldset">
 						<label>
 							<div class="fieldset__title">Название</div>
 							<input name="postTitle" class="input" placeholder="Введите название"/>
+						</label>
+					</div>
+					<div class="fieldset">
+						<label>
+							<div class="fieldset__title">Категория</div>
+							<select name="postCat">
+								<?php foreach ($cats as $cat) { ?>
+									<option value="<?=$cat['id']?>"><?=$cat['cat_title']?></option>
+								<?php } ?>
+							</select>
 						</label>
 					</div>
 					<div class="fieldset">
@@ -28,7 +38,10 @@
 					<div class="fieldset">
 						<label>
 							<div class="fieldset__title">Содержание</div>
-							<textarea name="postText" class="textarea height-200" rows="7" placeholder="Введите описание"></textarea>
+							<textarea id="ckeditor" name="postText" class="textarea height-200" rows="7" placeholder="Введите описание"></textarea>
+							<?php 
+							include_once ROOT . "templates/_parts/_ckeditor-connect.tpl";
+							 ?>
 						</label>
 					</div>
 					<div class="row">

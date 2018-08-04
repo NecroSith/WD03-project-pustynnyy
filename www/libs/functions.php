@@ -2,8 +2,8 @@
 
 function isAdmin(){
 	$result = false;
-	if ( isset($_SESSION['logged_user']) && $_SESSION['login'] == 1 ) {
-		if ($_SESSION['role'] == 'admin') {
+	if ( isset($_SESSION['logged-user']) && $_SESSION['login'] == 1 ) {
+		if ($_SESSION['logged-user']['role'] == 'admin') {
 				$result = true;
 		}
 	}
@@ -12,7 +12,7 @@ function isAdmin(){
 
 function isLoggedIn(){
 	$result = false;
-	if ( isset($_SESSION['logged_user']) && $_SESSION['login'] == 1 ) {
+	if ( isset($_SESSION['logged-user']) && $_SESSION['login'] == 1 ) {
 		$result = true;
 	}
 	return $result;

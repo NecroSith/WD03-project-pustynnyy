@@ -1,6 +1,6 @@
 <?php 
 
-include ROOT . "libs/functions.php";
+include_once ROOT . "libs/functions.php";
 
 $errors = [];
 $success = [];

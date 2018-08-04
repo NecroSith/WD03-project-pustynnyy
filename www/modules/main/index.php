@@ -1,13 +1,8 @@
 <?php 
 
-// $details = R::find('about', 1);
-// // print_r($details);
+$about = R::load('about', 4);
+$posts = R::find('posts', 'ORDER BY id DESC LIMIT 3');
 
-// $aboutName = $details[1]['name'];
-// $aboutDesc = $details[1]['description'];
-
-// $title = "Главная страница";
-// $content = "Содержимое главной страницы";
 
 ob_start();
 include ROOT . "templates/main/main.tpl";
