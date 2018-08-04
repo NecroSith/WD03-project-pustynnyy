@@ -1,5 +1,9 @@
 <?php 
 
+if (!isAdmin()) {
+	header("Location: " . HOST);
+}
+
 
 $title = "Редактирование категории";
 
