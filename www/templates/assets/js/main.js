@@ -158,8 +158,4 @@ $(document).ready(function() {
 		$('[data-notify-hide]').slideUp(500);
 	});
 
-	
-
-
-
 });

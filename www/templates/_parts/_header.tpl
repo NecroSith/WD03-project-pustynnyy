@@ -1,7 +1,7 @@
 <?php 
 
 
-if (isset($_SESSION['logged-user']) && $_SESSION['login'] == 1 && $_SESSION['role'] == 'admin') 
+if (isAdmin())
 {
 	include ROOT . "templates/_parts/_admin-panel.tpl";
 }

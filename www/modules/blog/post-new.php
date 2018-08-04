@@ -1,8 +1,14 @@
 <?php 
 
+if (!isAdmin()) {
+	header("Location: " . HOST);
+}
+
 
 $title = "Блог - добавить новый пост";
 // $currentUser = $_SESSION['logged-user'];
+$cats = R::find('categories', 'ORDER BY cat_title ASC');
+
 
 if(isset($_POST['postNew'])) {
 	if (trim($_POST['postTitle']) == '') {
@@ -19,6 +25,7 @@ if(isset($_POST['postNew'])) {
 		$post->text = $_POST['postText'];
 		$post->authorId = $_SESSION['logged-user']['id'];
 		$post->dateTime = R::isoDateTime();
+		$post->category = htmlentities($_POST['postCat']);
 
 		if(isset($_FILES['postImage']['name']) && $_FILES['postImage']['tmp_name'] != '') {
 
@@ -70,7 +77,6 @@ if(isset($_POST['postNew'])) {
 			}
 
 			
-
 			$db_fileName = rand(1000000, 9999999) . "." . $fileExt;
 			$uploadFile = $postImageFolderLocation . $db_fileName;
 			$moveResult = move_uploaded_file($fileTempLoc, $uploadFile);
@@ -107,18 +113,11 @@ if(isset($_POST['postNew'])) {
 
 			$post->postImageSmall = "320-" . $db_fileName;
 
-			
-
-			// print_r($width);
-			// print_r($height);
-
-		
-
-
 		}
 
 		R::store($post);
-		header('Location: ' . HOST . "blog");
+		header('Location: ' . HOST . "blog?result=postCreated");
+		exit();
 	}
 }
 

@@ -49,6 +49,14 @@
   border-bottom: none;
 }
 
+.w-70p {
+	width: 70%;
+}
+
+.w-80p {
+	width: 80%;
+}
+
 .w-100p {
 	width: 100%;
 }
@@ -59,4 +67,26 @@
 	padding-left: 1.3em;
   	padding-right: 1.3em;
   	line-height: 1;
+}
+
+.uploaded-image {
+	background-color: transparent;
+}
+
+.uploaded-image__img {
+	background-color: white;
+}
+
+.sticky-footer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	justify-content: space-between;
 }
