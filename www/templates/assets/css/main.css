@@ -8,15 +8,15 @@ body {
   font-size: 16px;
   padding: 0;
   margin: 0;
-  min-height: 100%;
+  height: 100%;
 }
 /* fix for top margin collapsing and vertical scroll prevent for body tag, when body height = 100% */
 body::before {
-  content: "";
-  display: block;
+  content: ;
+/*  display: block;
   width: 1px;
   height: 1px;
-  background-color: transparent;
+  background-color: transparent;*/
 }
 input,
 textarea {

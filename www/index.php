@@ -5,6 +5,7 @@ require ROOT . "db.php";
 require ROOT . "libs/functions.php";
 
 $errors = [];
+$success = [];
 
 session_start();
 
@@ -83,19 +84,55 @@ switch ($uri[0]) {
 		include ROOT . "modules/blog/post-new.php";
 		break;
 
+	case 'blog/post-edit':
+		include ROOT . "modules/blog/post-edit.php";
+		break;
+
+	case 'blog/post-delete':
+		include ROOT . "modules/blog/post-delete.php";
+		break;
+
 	case 'blog/post':
 		include ROOT . "modules/blog/post.php";
 		break;
 
 	//  end blog section
 
+	// About
+
 	case 'about':
 		include ROOT . "modules/about/index.php";
 		break;
 
+	case 'edit-text':
+		include ROOT . "modules/about/edit-text.php";
+		break;
+
+	case 'edit-skills':
+		include ROOT . "modules/about/edit-skills.php";
+		break;
+
+	case 'edit-jobs':
+		include ROOT . "modules/about/edit-jobs.php";
+		break;
+
+	// end about
+
+	//  Contacts
+
 	case 'contacts':
 		include ROOT . "modules/contacts/index.php";
 		break;
+
+	case 'contacts-edit':
+		include ROOT . "modules/contacts/edit.php";
+		break;
+
+	case 'messages':
+		include ROOT . "modules/contacts/messages.php";
+		break;
+
+	//  End contacts
 
 	default:
 		include ROOT . "modules/main/page-not-found.php";

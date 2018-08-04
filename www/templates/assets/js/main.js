@@ -41,14 +41,17 @@ $(document).ready(function() {
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); });
 
-	$('.comment-add__button').on('click', function(e){
+	$('input[data-add-comment]').on('click', function(e){
 		e.preventDefault();
 		comment = $('.comment-add-block__text').children('.textarea');
 		if ( comment.val() == '' ) {
-			$('.error').fadeIn();
+			$('.error[data-error-comment-empty]').fadeIn();
 			comment.focus(function(event) {
-				$('.error').fadeOut();
+				$('.error[data-error-comment-empty]').fadeOut();
 			});
+		}
+		else {
+			$('#commentForm').submit();
 		}
 	});
 	// ----- check login form ----- //
@@ -157,9 +160,5 @@ $(document).ready(function() {
 	$('[data-notify-hide]').dblclick(function() {
 		$('[data-notify-hide]').slideUp(500);
 	});
-
-	
-
-
 
 });
